@@ -1,0 +1,2787 @@
+<!DOCTYPE html> 
+<?php 
+session_start();
+$email=$var_value = $_SESSION['varname'];
+//alert("This is an email" + $email);
+ ?>
+<html>
+<head>
+<!---------------------- Header with all references -------------------------------------------------------------------------------->
+
+<meta content="width=device-width, minimum-scale=1, maximum-scale=1" name="viewport">
+<title>BlueSky Mobile Application</title>
+
+
+<link rel="stylesheet" type="text/css" href="includes/style1.css">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+<link href="jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/> 
+
+
+<script src="jquery-2.0.3.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.3.1.min.js" type="text/javascript"></script>
+<script src="knockout-2.3.0.js" type="text/javascript"></script>
+<script src="knockout.mapping-latest.js" type="text/javascript"></script>
+<script src="jquery.livequery.js" type="text/javascript"></script> 
+
+<script src="knockout.multimodels-0.1.min.js" type="text/javascript"></script>
+
+ 	  
+
+<!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js">-->
+
+<!--<script src="cdv-plugin-fb-connect.js"></script>
+<script src="facebook-js-sdk.js"></script>-->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+/*
+When the screen is 30em and below, the column b is stacked below 
+column a and column c is hidden.
+*/
+@media all and (max-width: 30em) {
+    .home-breakpoint .ui-block-a,
+    .home-breakpoint .ui-block-b {
+        width: 100%;
+        float:none; 
+        // more styles
+    }
+ 
+    .home-breakpoint .ui-block-c {
+        display: none;
+    }
+}
+ 
+ 
+/*
+When the screen is above 30em and below 48em, columns a and b 
+are displayed beside each other,  column c is hidden.
+*/
+@media all and (min-width: 30.1em) and (max-width:48em) {
+    .home-breakpoint .ui-block-a {
+        width: 50%;float: left;
+        // more styles
+    }
+ 
+    .home-breakpoint .ui-block-b {
+        width: 50%;float: left;
+        // more styles
+    }
+    .home-breakpoint .ui-block-c {
+        display:none;
+    }
+}
+ 
+ 
+/*
+When the screen is above 48em all 3 columns are shown 
+beside each other.
+*/
+ 
+@media all and (min-width: 48.1em) {
+    .home-breakpoint .ui-block-a {
+        width: 40%; float: left;
+        // more styles
+    }
+ 
+    .home-breakpoint .ui-block-b {
+        width: 40%;float: left;
+        // more styles
+    }
+     
+    .home-breakpoint .ui-block-c {
+        width:20%;float: left;
+        // more styles
+    }    
+}
+</style>
+
+
+
+
+
+
+
+		
+		
+	
+
+<style>
+  ul {
+ 
+    list-style-type:none;
+}
+li span {
+	
+    display:inline-block;
+    width:430px;
+}
+li {
+    list-style-image: url('sqpurple.gif');
+}
+
+</style>
+
+<!--<script>
+$(document).on("pagecreate",function(event){
+  $(window).on("orientationchange",function(event){
+    alert("Orientation changed to: " + event.orientation);
+  });                     
+});
+</script>-->
+
+<!--
+<script>
+$(document).on("pagecreate",function(event){
+  $(window).on("orientationchange",function(){
+    if(window.orientation == 0)
+    {
+      //$("#page1").footer6.css({"background-color":"yellow","font-size":"300%"});
+	 alert("i am in portrait  mode"); 
+	 
+	 
+    }
+    else
+    {
+		alert("i am in landscaping mode");
+    }
+  });                   
+});
+</script>
+<!--
+<script>
+$(document).ready(function () {
+     $(window)    
+          .bind('orientationchange', function(){
+               if (window.orientation % 180 == 0){
+                   $(document.body).css("-webkit-transform-origin", "")
+                       .css("-webkit-transform", "");               
+               } 
+               else {                   
+                   if ( window.orientation > 0) { //clockwise
+                     $(document.body).css("-webkit-transform-origin", "200px 190px")
+                       .css("-webkit-transform",  "rotate(-90deg)");  
+                   }
+                   else {
+                     $(document.body).css("-webkit-transform-origin", "680px 490px")
+                       .css("-webkit-transform",  "rotate(90deg)"); 
+                   }
+               }
+           })
+          .trigger('orientationchange'); 
+});
+
+</script>-->
+<!--<script>
+$(document).ready(function () {
+  function reorient(e) {
+    var portrait = (window.orientation % 180 == 0);
+    $("body > div").css("-webkit-transform", !portrait ? "rotate(-90deg)" : "");
+  }
+  window.onorientationchange = reorient;
+  window.setTimeout(reorient, 0);
+});
+</script>-->
+
+<style>
+@media screen and (max-width: 960px) {
+    #nav#full {
+        display:none
+    }
+ 
+  
+	 nav#mobile1 {
+        background-color:#FFFAFA;
+        
+        display:block;
+	
+    }
+	 nav#mobile2 {
+        background-color:#FFFAFA;
+        
+        display:block;
+	
+    }
+	 nav#mobile3 {
+        background-color:#FFFAFA;
+        
+        display:block;
+	
+    }
+	 nav#mobile4 {
+        background-color:#FFFAFA;
+        
+        display:block;
+	
+    }
+	 nav#mobile5 {
+        background-color:#FFFAFA;
+        
+        display:block;
+	
+    }
+	 nav#mobile6 {
+        background-color:#FFFAFA;
+        
+        display:block;
+	
+    }
+	 nav#mobile7 {
+        background-color:#4682B4;
+        
+        display:block;
+	
+    }
+	nav#mobile8 {
+        background-color:#FFFAFA;
+        
+        display:block;
+	
+    }
+		nav#mobile9 {
+        background-color:#FFFAFA;
+        
+        display:block;
+	
+    }
+		nav#mobile10 {
+        background-color:#FFFAFA;
+        
+        display:block;
+	
+    }
+	nav#mobile12 {
+        background-color:#FFFAFA;
+        
+        display:block;
+	
+    }
+ 
+    /*
+    Top black bar that holds the toggle button
+    */
+ 
+    nav#mobile #toggle-bar {
+        line-height:70px;
+        height:70px;
+    }
+ 
+    /*
+    Toggle button #1 ("Menu")
+    */
+ 
+    nav#mobile strong a {
+        margin-left:30px;
+        border:1px solid #444;
+        padding:10px;
+    }
+ 
+    /*
+    Toggle button #2 ("Navicon")
+    */
+ 
+    nav#mobile .navicon {
+        float: left;
+        height: 6px;
+        width: 34px;
+        margin: 20px;
+        border-top: 18px double #FFF;
+        border-bottom: 6px solid #FFF;
+        font-size:0;
+    }
+ 
+    /*
+    The dropdown menu
+    */
+ 
+    nav#mobile ul li {
+        clear:both;
+        list-style:none;
+    }
+ 
+  
+	 nav#mobile1 ul li a {
+        display:block;
+        background-color:;
+        text-transform:uppercase;
+        letter-spacing:.2em;
+        margin:2px 3px;
+       
+		font-family: "Open Sans Regular";
+		font-size:16px;
+		color:#4c4c4c;
+		
+    }
+		 nav#mobile2 ul li a {
+        display:block;
+        background-color:;
+        text-transform:uppercase;
+        letter-spacing:.2em;
+        margin:2px 3px;
+       
+		font-family: "Open Sans Regular";
+		font-size:16px;
+		color:#4c4c4c;
+		
+    }
+		 nav#mobile3 ul li a {
+        display:block;
+        background-color:;
+        text-transform:uppercase;
+        letter-spacing:.2em;
+        margin:2px 3px;
+       
+		font-family: "Open Sans Regular";
+		font-size:16px;
+		color:#4c4c4c;
+		
+    }
+	nav#mobile4 ul li a {
+        display:block;
+        background-color:;
+        text-transform:uppercase;
+        letter-spacing:.2em;
+        margin:2px 3px;
+       
+		font-family: "Open Sans Regular";
+		font-size:16px;
+		color:#4c4c4c;
+		
+    }
+		nav#mobile5 ul li a {
+        display:block;
+        background-color:;
+        text-transform:uppercase;
+        letter-spacing:.2em;
+        margin:2px 3px;
+       
+		font-family: "Open Sans Regular";
+		font-size:16px;
+		color:#4c4c4c;
+		
+    }
+	nav#mobile6 ul li a {
+        display:block;
+        background-color:;
+        text-transform:uppercase;
+        letter-spacing:.2em;
+        margin:2px 3px;
+       
+		font-family: "Open Sans Regular";
+		font-size:16px;
+		color:#4c4c4c;
+		
+    }
+	nav#mobile7 ul li a {
+        display:block;
+        background-color:;
+        text-transform:uppercase;
+        letter-spacing:.2em;
+        margin:2px 3px;
+       
+		font-family: "Open Sans Regular";
+		font-size:16px;
+		color:#FFFFFF;
+		
+    }
+	nav#mobile8 ul li a {
+        display:block;
+        background-color:;
+        text-transform:uppercase;
+        letter-spacing:.2em;
+        margin:2px 3px;
+       
+		font-family: "Open Sans Regular";
+		font-size:16px;
+		color:#4c4c4c;
+		
+    }
+	nav#mobile8 ul li a {
+        display:block;
+        background-color:;
+        text-transform:uppercase;
+        letter-spacing:.2em;
+        margin:2px 3px;
+       
+		font-family: "Open Sans Regular";
+		font-size:16px;
+		color:#4c4c4c;
+		
+    }
+	nav#mobile10 ul li a {
+        display:block;
+        background-color:;
+        text-transform:uppercase;
+        letter-spacing:.2em;
+        margin:2px 3px;
+       
+		font-family: "Open Sans Regular";
+		font-size:16px;
+		color:#4c4c4c;
+		
+    }
+	nav#mobile11 ul li a {
+        display:block;
+        background-color:;
+        text-transform:uppercase;
+        letter-spacing:.2em;
+        margin:2px 3px;
+       
+		font-family: "Open Sans Regular";
+		font-size:16px;
+		color:#4c4c4c;
+		
+    }
+	
+ 
+    nav#mobile ul ul {
+        font-size:small;
+    }
+ 
+    nav#mobile ul ul li {
+        margin-left:30px;
+    }
+ 
+    nav#mobile ul ul a {
+        background-color:#333;
+        padding-left:8px;
+    }
+ 
+    nav#mobile ul ul a:before {
+        content: "2192";
+        padding-right:8px;
+    }
+}
+@media all and (orientation:landscape) {
+
+
+nav#mobile1 ul li a {
+        display:block;
+        background-color:;
+        text-transform:uppercase;
+        letter-spacing:.2em;
+        margin:2px 3px;
+       
+		font-family: "Open Sans Regular";
+		font-size:16px;
+		color:#4c4c4c;
+		
+    }
+	 nav#mobile2 ul li a {
+        display:block;
+        background-color:;
+        text-transform:uppercase;
+        letter-spacing:.2em;
+        margin:2px 3px;
+       
+		font-family: "Open Sans Regular";
+		font-size:16px;
+		color:#4c4c4c;
+		
+    }
+		 nav#mobile3 ul li a {
+        display:block;
+        background-color:;
+        text-transform:uppercase;
+        letter-spacing:.2em;
+        margin:2px 3px;
+       
+		font-family: "Open Sans Regular";
+		font-size:16px;
+		color:#4c4c4c;
+		
+    }
+	nav#mobile4 ul li a {
+        display:block;
+        background-color:;
+        text-transform:uppercase;
+        letter-spacing:.2em;
+        margin:2px 3px;
+       
+		font-family: "Open Sans Regular";
+		font-size:16px;
+		color:#4c4c4c;
+		
+    }
+		nav#mobile5 ul li a {
+        display:block;
+        background-color:;
+        text-transform:uppercase;
+        letter-spacing:.2em;
+        margin:2px 3px;
+       
+		font-family: "Open Sans Regular";
+		font-size:16px;
+		color:#4c4c4c;
+		
+    }
+	nav#mobile6 ul li a {
+        display:block;
+        background-color:;
+        text-transform:uppercase;
+        letter-spacing:.2em;
+        margin:2px 3px;
+       
+		font-family: "Open Sans Regular";
+		font-size:16px;
+		color:#4c4c4c;
+		
+    }
+	nav#mobile7 ul li a {
+        display:block;
+        background-color:;
+        text-transform:uppercase;
+        letter-spacing:.2em;
+        margin:2px 3px;
+       
+		font-family: "Open Sans Regular";
+		font-size:16px;
+		color:#FFFFFF;
+		
+    }
+	nav#mobile8 ul li a {
+        display:block;
+        background-color:;
+        text-transform:uppercase;
+        letter-spacing:.2em;
+        margin:2px 3px;
+       
+		font-family: "Open Sans Regular";
+		font-size:16px;
+		color:#4c4c4c;
+		
+    }
+	nav#mobile8 ul li a {
+        display:block;
+        background-color:;
+        text-transform:uppercase;
+        letter-spacing:.2em;
+        margin:2px 3px;
+       
+		font-family: "Open Sans Regular";
+		font-size:16px;
+		color:#4c4c4c;
+		
+    }
+	nav#mobile10 ul li a {
+        display:block;
+        background-color:;
+        text-transform:uppercase;
+        letter-spacing:.2em;
+        margin:2px 3px;
+       
+		font-family: "Open Sans Regular";
+		font-size:16px;
+		color:#4c4c4c;
+		
+    }
+	nav#mobile11 ul li a {
+        display:block;
+        background-color:;
+        text-transform:uppercase;
+        letter-spacing:.2em;
+        margin:2px 3px;
+       
+		font-family: "Open Sans Regular";
+		font-size:16px;
+		color:#4c4c4c;
+		
+    }
+	nav#mobile12 ul li a {
+        display:block;
+        background-color:;
+        text-transform:uppercase;
+        letter-spacing:.2em;
+        margin:2px 3px;
+       
+		font-family: "Open Sans Regular";
+		font-size:16px;
+		color:#4c4c4c;
+		
+    }
+
+
+
+}
+
+</style>
+
+
+
+
+<!---------------------------------------java Script Menu Bar--------------------------------------------------------------------------------->
+
+
+
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $("#mmenu1").hide();
+    $(".mtoggle").click(function() {
+        $("#mmenu1").slideToggle(500);
+    });
+});
+</script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $("#mmenu2").hide();
+    $(".mtoggle").click(function() {
+        $("#mmenu2").slideToggle(500);
+    });
+});
+</script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $("#mmenu3").hide();
+    $(".mtoggle").click(function() {
+        $("#mmenu3").slideToggle(500);
+    });
+});
+</script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $("#mmenu4").hide();
+    $(".mtoggle").click(function() {
+        $("#mmenu4").slideToggle(500);
+    });
+});
+</script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $("#mmenu5").hide();
+    $(".mtoggle").click(function() {
+        $("#mmenu5").slideToggle(500);
+    });
+});
+</script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $("#mmenu6").hide();
+    $(".mtoggle").click(function() {
+        $("#mmenu6").slideToggle(500);
+    });
+});
+</script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $("#mmenu7").hide();
+    $(".mtoggle").click(function() {
+        $("#mmenu7").slideToggle(500);
+    });
+});
+</script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $("#mmenu8").hide();
+    $(".mtoggle").click(function() {
+        $("#mmenu8").slideToggle(500);
+    });
+});
+</script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $("#mmenu10").hide();
+    $(".mtoggle").click(function() {
+        $("#mmenu10").slideToggle(500);
+    });
+});
+</script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $("#mmenu11").hide();
+    $(".mtoggle").click(function() {
+        $("#mmenu11").slideToggle(500);
+    });
+});
+</script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    $("#mmenu12").hide();
+    $(".mtoggle").click(function() {
+        $("#mmenu12").slideToggle(500);
+    });
+});
+</script>
+
+
+<!------------------------------------------------------------------------------------------------------>
+
+<script>
+var contact="";
+var check=true;
+var prefcon="";
+</script>
+</head> 
+<!----------------------------------- Body with All the application pages linking ----------------------------------------------------------------------------------------->
+<body> 
+
+
+<script>
+ function toggle(el) {
+    var tag=document.getElementById(el);
+      tag.style.display = tag.style.display === 'block' ? 'none' : 'block';
+// set as defaut oposite defaut active value in document 
+// here defaut is set to block cause it is none in CSS
+    }
+</script>
+
+<!-------------------------------------------------  Menu bar--------------------------------------------------------------------------------->
+
+
+<br><br><br><br><br><br><br><br>
+
+
+
+
+<p align="center"><img src="images/turn2.jpg" align="center"><br><br><p align="center"><strong><font color="#4682B4	">Blue Sky Mobile Application</font></strong></p><br><strong>Application Disabled ! Please Turn your device in landscape mode and ensure Screen rotation is turned on, on your device settings</strong></p>
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+
+    #warning-message { display; }
+    @media only screen and (orientation:portrait){
+		
+        #wrapper { display:none; }
+	
+        #warning-message { display;}
+    }
+    @media only screen and (orientation:landscape){
+        #warning-message { display:none; }
+		
+    }
+</style>
+<div id="warning-message">
+    <script>
+	alert("Welcome to Blue Sky Mobile Application this Application is only viewable in landscape mode, please turn your device");
+	</script>
+</div>
+
+<div id="wrapper">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---------------------------------------------------------------------------------------------------------------------------------------->
+
+<div data-role="page" id="page1" >
+
+<div data-role="header" class="footer6" data-icon="bars">
+<h1></h1>
+<img src="images/menu-icon.png" align="right" class="mtoggle" style="padding-right: 15px;padding-bottom: 15px;" style='width:60%;' border="0" alt="Null"/>
+<img src="images/search.png" align="right" style="padding-right: 15px;" style="padding-bottom: 15px;" style='width:60%;' border="0" alt="Null" />
+<img src="images/back.png" align="left" style="padding-left: 15px;" style="padding-bottom: 15px;" style='width:60%;' border="0" alt="Null" />
+<h1></h1>
+
+<br>
+
+    </div>
+	
+	<div class="footer7"> <img src="images/banner.png" ></div>
+	<nav id="mobile12">
+ 
+    <ul id="mmenu12">
+	</br>
+        <li><a href="#page" STYLE="text-decoration: none"><img src="images/logrequest.png" width="30" height="40"/>  Log Request</a></li>
+		</br>
+        <li ><a href="#specials" STYLE="text-decoration: none"><img src="images/specials.png" width="40" height="40"/>  Specials</a></li>
+		<br>
+        <li><a href="#services" STYLE="text-decoration: none"><img src="images/services.png" width="40" height="40"/>  Services</a></li>
+		<br>
+        <li ><a href="http://www.bluesky.co.ls/article.aspx?news" STYLE="text-decoration: none"><img src="images/News.png" width="40" height="40" />  News</a></li> 
+		<br>
+        <li><a href="" STYLE="text-decoration: none"><img src="images/Profile.png" width="40" height="40"/>  Profile</a></li> 
+		<br>
+        <li><a href="#callcenter1" STYLE="text-decoration: none"><img src="images/contact.png" width="40" height="40"/>  Contact Center</a></li> 
+		<br>
+		<li><a href="#page1" STYLE="text-decoration: none" ><img src="images/logout.png" width="40" height="40" />  Logout</a></li> 
+		</br>	
+    </ul>
+</nav>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<div data-role="content" class="Para1">
+    <p align="center">
+				<p align="left" align="center" style="font-size: 24px;">WELCOME TO BLUE SKY</p>
+<strong>Robin Sharma, author and global thought leader, made a profound statement when he said, Don t live the same year 75 times and call it a lifeIndeed. It s so easy to get caught up in making a living that we forget to make a life..</strong></br></br> What does making a life mean to you? Do you demonstrate your beliefs through your behaviour? Do you walk your talk?
+ 
+Here s the thing  the Life Clock is ticking. Use your time in a way that truly benefits you and makes you smile. Do things that please you, spend time with people who boost your happiness levels.</br></br> Reject mediocrity. Reject the same-old-same-old. Reject people who drain your energy. Believe that the world is kind, that good things will come to you. You will see it when you believe it!
+ 
+Let s get you started on the road to happiness.</br></br> <strong>Call +266 223 21919 for ways to lead an inspiring life.</strong></p>
+
+
+<div data-role="main" class="ui-content">
+    
+   <h4 align="center"> <a href="#page" data-transition="slide"> <img src="images/started.png "style='width: 40%;' border="0" alt="Null" ><font face="verdana"></font></a></h4>
+  </div>
+  
+  <script>
+
+</script>
+
+
+ 		
+     </div>
+	 <div data-role="footer"  class="footer3">
+    <p align="center">&copy BlueSky 2014</font></p>
+  </div>
+</div>
+
+<div data-role="page" id="page2" >
+<div data-role="header" class="footer6">
+<h1></h1>
+<img src="images/menu-icon.png" align="right"  style="padding-right: 15px;padding-bottom: 15px;"/>
+<img src="images/search.png" align="right" style="padding-right: 15px;" style="padding-bottom: 15px;"  />
+<img onclick="gobackPrevious();"src="images/back.png" align="left" style="padding-left: 15px;" style="padding-bottom: 15px;" />
+<h1></h1>
+<h1></h1>
+
+
+ </div>
+
+	<div data-role="content" class="footer7">
+  
+
+	<div align="center">
+	<p align="center" align="center" style="font-size: 24px;" ><font face="Open Sans Regular"><strong>WELCOME BACK</strong></font></p>
+	<p align="center" align="center" style="font-size: 20px;"><font face="Open Sans Regular">Please complete the information below to complete your registration</font></p>
+	<form>
+	<!--<tr>
+			<td><input type="text" name="username"  placeholder="USERNAME" data-mini="true"></td>
+	
+	</tr>
+	<tr>
+			<td><input type="password" name="password" placeholder="PASSWORD" data-mini="true"></td>
+	</tr>
+  
+--><img src='images/flield.png' style='width:60%;' border="0" alt="Null"><br>
+	<img src='images/flield.png' style='width:60%;' border="0" alt="Null">
+	</br></br><a href="#page"><img src='images/login.png' style='width:60%;' border="0" alt="Null"></img></br></br></a>
+     </form>
+	 <img src='images/or.png' style='width:60%;' border="0" alt="Null"></br></br>
+	<a href="" ><img src='images/facebook1.png' onclick="Login()" style='width:60%;' border="0" alt="Null"  ></img></a> <br><br>
+	<a href="login-with.php?provider=Twitter" target="_blank"><img src='images/twitter1.png' style='width:60%;' border="0" alt="Null"></img></a> <br><br>
+	
+	</div>
+</div>	
+<div data-role="footer" class="footer2">
+   <h3><font face="Open Sans Regular ">&copy BlueSky 2014</font></h3>
+  </div>
+</div>
+
+<div data-role="page" id="page" >
+
+<div data-role="header" class="footer2">
+<h1></h1>
+<!--<span class="open left"><a href="#panel-01">&#61641;</a></span>-->
+
+<img  src="images/menu-icon.png" align="right"   style="padding-right: 15px;" style="padding-bottom: 15px;"/>
+<img src="images/search.png" align="right" style="padding-right: 15px;" style="padding-bottom: 15px;" />
+<img  onclick="gobackPrevious();"src="images/back.png" align="left" style="padding-left: 15px;" style="padding-bottom: 15px;"/>
+<h1></h1>
+<h1></h1>
+</br>
+<form class="ui-filterable">
+<p style="padding-left: 15px;padding-right: 15px;"><input id="myFilter" data-type="search" placeholder="Chicago lllinois" ></p>
+</form>
+<h1></h1>
+
+
+
+
+    </div>
+	
+</br>
+<div data-role="main" class="footerSpace">
+
+	<h1></h1>
+	<h1></h1>
+ 	<ul id="main_menu" data-role="listview" class="mainmenu" data-input="#myFilter" data-inset="true" ></ul>
+	
+     </div>
+	 <!--<div class="demo-wrapper" data-role="page">
+	 <div class="panel left" data-role="panel" data-position="left" data-display="push" id="panel-01">  
+        <ul>  
+            <li class="newsfeed"><a href="#" title="Home">News Feed</a></li>  
+            <li class="profile"><a href="#" title="Profile">Profile</a></li>  
+            <li class="setting"><a href="#" title="Setting">Setting</a></li>  
+            <li class="logout"><a href="#" title="Logout">Logout</a></li>  
+            <li class="report"><a href="#" title="Report">Report Bug</a></li>  
+        </ul>  
+    </div> 
+	
+	
+	 </div>-->
+	 <div data-role="footer"  class="footer3" >
+    <h1><font face="Open Sans Regular">&copy BlueSky 2014</font></h1>
+  </div>
+</div>
+<div data-role="page" id="specials">
+<div data-role="header" class="footer3">
+	
+	<img src="images/BlueSkyGenericTravelv2.jpg" width="100%"  height="100%"> </br>
+
+    </div>
+<div data-role="content" class="footerSpace">
+    
+     </div>
+	 <div data-role="footer"  class="footer2">
+    <h1><font face="Open Sans Regular">&copy BlueSky 2014</font></h1>
+  </div>
+</div>
+
+<div data-role="page" id="news1" >
+<div data-role="panel" id="myPanel"> 
+    <h2>News</h2>
+    <p><font face="verdana">Blue Sky Makes its Mark Standard Lesotho Bank launches a new innovative lifestyle programme with exclusive member benefits to their High Network Individuals (HNI´s), Elite, Silver and Blue Card Holders. Offering a 24-hour personal assistant, convenience, peace of mind and comfort.</font></p>
+<a href="#news1" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">hide</a>
+  </div> 
+<div data-role="header" data-theme="b">
+<h1><font face="verdana"> News</font></h1>
+	<img src="images/blue.png" width="100%"  height="10%"> 
+	<h1><font face="verdana"><a href="#page" class="ui-btn" data-transition="pop">Back</a></font></h1>
+    </div>
+<div data-role="content" class="footerSpace">
+    <a href="#myPanel" class="ui-btn ui-btn-b ui-icon-info  ui-btn-icon-left ui-corner-all"><font face="verdana">News</font></a><br/><br/><br/>
+     </div>
+	 <div data-role="footer" data-theme="b">
+    <h1><font face="verdana">&copy BlueSky 2014</font></h1>
+  </div>
+</div>
+
+
+
+<div data-role="page" id="services" >
+<div data-role="header" class="footer2">
+<h1></h1>
+<img src="images/menu-icon.png" align="right" class="mtoggle" style="padding-right: 15px;" style="padding-bottom: 15px;"/>
+<img src="images/search.png" align="right" style="padding-right: 15px;" style="padding-bottom: 15px;" />
+<img onclick="gobackPrevious();" src="images/back.png" align="left" style="padding-left: 15px;" style="padding-bottom: 15px;"/>
+<h1></h1>
+<h1></h1>
+
+
+</br>
+<form class="ui-filterable">
+<p style="padding-left: 15px;padding-right: 15px;"><input id="myFilter1" data-type="search" placeholder="Chicago lllinois" ></p>
+</form>
+<h1></h1>
+<nav id="mobile7">
+ 
+    <ul id="mmenu7">
+	</br>
+        <li><a href="#page" STYLE="text-decoration: none"><img src="images/logrequest.png" width="30" height="40"/>  Log Request</a></li>
+		</br>
+        <li ><a href="#specials" STYLE="text-decoration: none"><img src="images/specials.png" width="40" height="40"/>  Specials</a></li>
+		<br>
+        <li><a href="#services" STYLE="text-decoration: none"><img src="images/services.png" width="40" height="40"/>  Services</a></li>
+		<br>
+        <li ><a href="http://www.bluesky.co.ls/article.aspx?news" STYLE="text-decoration: none"><img src="images/News.png" width="40" height="40" />  News</a></li> 
+		<br>
+        <li><a href="" STYLE="text-decoration: none"><img src="images/Profile.png" width="40" height="40"/>  Profile</a></li> 
+		<br>
+        <li><a href="#callcenter1" STYLE="text-decoration: none"><img src="images/contact.png" width="40" height="40"/>  Contact Center</a></li> 
+		<br>
+		<li><a href="#page1" STYLE="text-decoration: none" ><img src="images/logout.png" width="40" height="40" />  Logout</a></li> 
+		</br>	
+    </ul>
+ 
+</nav>
+    </div>
+<div data-role="content" class="footerSpace">
+    <ul id="serviceList" data-role="listview" class="mainmenu" data-input="#myFilter1" data-inset="true" ></u>
+     </div>
+	 <div data-role="footer"  class="footer3">
+    <h1><font face="Open Sans Regular">&copy BlueSky 2014</font></h1>
+  </div>
+</div>
+<!-- <div data-role="page" id="news" >
+<div data-role="panel" id="myPanel"> 
+    <h2>News</h2>
+    <p><font face="verdana">Blue Sky Makes its Mark Standard Lesotho Bank launches a new innovative lifestyle programme with exclusive member benefits to their High Network Individuals (HNI´s), Elite, Silver and Blue Card Holders. Offering a 24-hour personal assistant, convenience, peace of mind and comfort.</font></p>
+<a href="#page" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">hide</a>
+  </div> 
+<div data-role="header" data-theme="b">
+<h1><font face="verdana"> </font></h1>
+	<img src="images/blue.png" width="100%"  height="10%"> 
+	<h1><font face="verdana">News</font></h1>
+    </div>
+
+	 <div data-role="footer" data-theme="b">
+    <h1><font face="verdana">Copyright &copy 2014 BlueSky</font></h1>
+  </div>
+</div>
+ -->
+<div data-role="page" id="countries"  >
+
+<div data-role="header"  class="footer4"> 
+	<h1></h1>
+
+<img src="images/menu-icon.png" align="right" class="mtoggle" style="padding-right: 15px;" style="padding-bottom: 15px;"/>
+<img src="images/search.png" align="right" style="padding-right: 15px;" style="padding-bottom: 15px;" />
+<img onclick="gobackPrevious();" src="images/back.png" align="left" style="padding-left: 15px;" style="padding-bottom: 15px;"/></br></br></br>
+
+
+</div>
+</br>
+<p align="center" style="font-size: 24px;"><font face="Open Sans Regular">Select the country please</font></p>
+	<div data-role="content" class="myheading">
+	
+
+	
+	
+
+  
+</div>
+
+	<div data-role="content" class="footerSpace2" >
+	<nav id="mobile1">
+ 
+    <ul id="mmenu1">
+		</br>
+        <li><a href="#page" STYLE="text-decoration: none"><img src="images/logrequest.png" width="30" height="40"/>  Log Request</a></li>
+		</br>
+        <li ><a href="#specials" STYLE="text-decoration: none"><img src="images/specials.png" width="40" height="40"/>  Specials</a></li>
+		<br>
+        <li><a href="#services" STYLE="text-decoration: none"><img src="images/services.png" width="40" height="40"/>  Services</a></li>
+		<br>
+        <li ><a href="http://www.bluesky.co.ls/article.aspx?news" STYLE="text-decoration: none"><img src="images/News.png" width="40" height="40" />  News</a></li> 
+		<br>
+        <li><a href="" STYLE="text-decoration: none"><img src="images/Profile.png" width="40" height="40"/>  Profile</a></li> 
+		<br>
+        <li><a href="#callcenter1" STYLE="text-decoration: none"><img src="images/contact.png" width="40" height="40"/>  Contact Center</a></li> 
+		<br>
+		<li><a href="#page1" STYLE="text-decoration: none" ><img src="images/logout.png" width="40" height="40" />  Logout</a></li> 
+		</br>
+    </ul>
+ 
+</nav>
+        <ul id="country_list" data-role="listview"  data-bind="foreach: items" data-model="viewModelCoutries" class="mainmenu3" data-filter="true" data-filter-placeholder="Search..." >
+		  <li ><a href="#provinces" class="countries" data-transition="slide" >
+		  <img  src="images/arrow.png" width="15" height="30" class="Arrow" >
+		  <p style="font-size: 20px;padding-left: 25px;padding-top: 10px;" class="ui-li-desc" data-bind="text: CountryName"></p>
+	
+		 
+		 </a></li>
+		 
+		 </ul>
+    </div>	
+<div data-role="footer"  class="footer2">
+    <h1><font face="Open Sans Regular">&copy BlueSky 2014</font></h1>
+  </div>	
+   
+</div>
+
+<div data-role="page" id="provinces" >
+
+<div data-role="header" class="footer2">
+	<h1></h1>
+<img src="images/menu-icon.png" align="right" class="mtoggle" style="padding-right: 15px;" style="padding-bottom: 15px;"/>
+<img src="images/search.png" align="right" style="padding-right: 15px;" style="padding-bottom: 15px;" />
+<img  onclick="gobackPrevious();"  src="images/back.png" align="left" style="padding-left: 15px;" style="padding-bottom: 15px;"/></br></br></br>
+
+
+
+
+<script>
+function gobackPrevious() {
+	 window.history.back();
+ }
+</script>
+ 
+
+</div>
+</br>
+<p align="center" style="font-size: 24px;"><font face="Open Sans Regular">Please make a selection for province</font></p>
+	<div data-role="content" class="myheading">
+    
+</div>
+	<div data-role="content" class="footerSpace2" >
+	<nav id="mobile2">
+ 
+    <ul id="mmenu2">
+		</br>
+        <li><a href="#page" STYLE="text-decoration: none"><img src="images/logrequest.png" width="30" height="40"/>  Log Request</a></li>
+		</br>
+        <li ><a href="#specials" STYLE="text-decoration: none"><img src="images/specials.png" width="40" height="40"/>  Specials</a></li>
+		<br>
+        <li><a href="#services" STYLE="text-decoration: none"><img src="images/services.png" width="40" height="40"/>  Services</a></li>
+		<br>
+        <li ><a href="http://www.bluesky.co.ls/article.aspx?news" STYLE="text-decoration: none"><img src="images/News.png" width="40" height="40" />  News</a></li> 
+		<br>
+        <li><a href="" STYLE="text-decoration: none"><img src="images/Profile.png" width="40" height="40"/>  Profile</a></li> 
+		<br>
+        <li><a href="#callcenter1" STYLE="text-decoration: none"><img src="images/contact.png" width="40" height="40"/>  Contact Center</a></li> 
+		<br>
+		<li><a href="#page1" STYLE="text-decoration: none" ><img src="images/logout.png" width="40" height="40" />  Logout</a></li> 
+		</br>
+    </ul>
+ 
+</nav>
+         <ul id="province_list" data-role="listview" data-bind="foreach: items" data-model="viewModelProvinces" class="mainmenu2" data-filter="true" data-filter-placeholder="Search..." >
+		 <li><a href="#towns" class="provinces"  data-transition="slide">
+		  <p style="font-size: 18px;padding-left: 25px;padding-top: 10px;" class="ui-li-desc" data-bind="text: Province"></p>
+		 <img align= "right" src="images/arrow.png" width="15" height="30" class="Arrow">
+		 </li></a>
+		 </ul>
+    </div>	
+<div data-role="footer"  class="footer4">
+    <h1><font face="Open Sans Regular">&copy BlueSky 2014</font></h1>
+  </div>	
+   
+</div>
+
+<div data-role="page" id="towns">
+
+<div data-role="header" class="footer2">
+<h1></h1>
+<img src="images/menu-icon.png" align="right" class="mtoggle"  style="padding-right: 15px;" style="padding-bottom: 15px;"/>
+<img src="images/search.png" align="right" style="padding-right: 15px;" style="padding-bottom: 15px;" />
+<img onclick="gobackPrevious();" src="images/back.png" align="left" style="padding-left: 15px;" style="padding-bottom: 15px;"/></br></br></br>
+
+
+
+
+
+
+
+</div>
+<!--<a href="#page"  data-transition="slide">
+  <!--<img src="images/home.png" alt="Home page" style="width:42px;height:42px;border:0" align="right"></br>
+</a> -->
+<p align="center" style="font-size: 24px;"><font face="Open Sans Regular">Please select town you are from</font></p>
+
+	<div data-role="content" class="myheading">
+    
+</div>
+	<div data-role="content" class="foote">
+	<nav id="mobile3">
+ 
+    <ul id="mmenu3">
+		</br>
+        <li><a href="#page" STYLE="text-decoration: none"><img src="images/logrequest.png" width="30" height="40"/>  Log Request</a></li>
+		</br>
+        <li ><a href="#specials" STYLE="text-decoration: none"><img src="images/specials.png" width="40" height="40"/>  Specials</a></li>
+		<br>
+        <li><a href="#services" STYLE="text-decoration: none"><img src="images/services.png" width="40" height="40"/>  Services</a></li>
+		<br>
+        <li ><a href="http://www.bluesky.co.ls/article.aspx?news" STYLE="text-decoration: none"><img src="images/News.png" width="40" height="40" />  News</a></li> 
+		<br>
+        <li><a href="" STYLE="text-decoration: none"><img src="images/Profile.png" width="40" height="40"/>  Profile</a></li> 
+		<br>
+        <li><a href="#callcenter1" STYLE="text-decoration: none"><img src="images/contact.png" width="40" height="40"/>  Contact Center</a></li> 
+		<br>
+		<li><a href="#page1" STYLE="text-decoration: none" ><img src="images/logout.png" width="40" height="40" />  Logout</a></li> 
+		</br>	
+    </ul>
+ 
+</nav>
+         <ul id="town_list" data-role="listview" data-bind="foreach: items" data-model="viewModelTowns" class="mainmenu2" data-filter="true" data-filter-placeholder="Search..." >
+		 <li><a href="#categories" class="town"  data-transition="slide">
+		 <p style="font-size: 18px;padding-left: 25px;padding-top: 10px;" class="ui-li-desc" data-bind="text: Area"></p>
+		 <img align= "right" src="images/arrow.png" width="15" height="30" class="Arrow">
+		 </li></a>
+		 </ul>
+    </div>	
+<div data-role="footer"  class="footer3">
+    <h1><font face="Open Sans Regular">&copy BlueSky 2014</font></h1>
+  </div>
+</div>
+
+
+<div data-role="page" id="callcenter1">
+<div data-role="header"  class="footer2">
+<h1></h1>
+<img src="images/menu-icon.png" align="right" class="mtoggle"  style="padding-right: 15px;" style="padding-bottom: 15px;"/>
+<img src="images/search.png" align="right" style="padding-right: 15px;" style="padding-bottom: 15px;" />
+<img onclick="gobackPrevious();" src="images/back.png" align="left" style="padding-left: 15px;" style="padding-bottom: 15px;"/></br></br></br>
+
+
+
+
+
+</div>
+<p align="center" style="font-size: 24px;"><font face="Open Sans Regular">Speak to one of our consultant</font></p>
+	<div data-role="content" class="myheading2">
+	
+	<nav id="mobile10">
+ 
+    <ul id="mmenu10">
+	</br>
+        <li><a href="#page" STYLE="text-decoration: none"><img src="images/logrequest.png" width="30" height="40"/>  Log Request</a></li>
+		</br>
+        <li ><a href="#specials" STYLE="text-decoration: none"><img src="images/specials.png" width="40" height="40"/>  Specials</a></li>
+		<br>
+        <li><a href="#services" STYLE="text-decoration: none"><img src="images/services.png" width="40" height="40"/>  Services</a></li>
+		<br>
+        <li ><a href="http://www.bluesky.co.ls/article.aspx?news" STYLE="text-decoration: none"><img src="images/News.png" width="40" height="40" />  News</a></li> 
+		<br>
+        <li><a href="" STYLE="text-decoration: none"><img src="images/Profile.png" width="40" height="40"/>  Profile</a></li> 
+		<br>
+        <li><a href="#callcenter1" STYLE="text-decoration: none"><img src="images/contact.png" width="40" height="40"/>  Contact Center</a></li> 
+		<br>
+		<li><a href="#page1" STYLE="text-decoration: none" ><img src="images/logout.png" width="40" height="40" />  Logout</a></li> 
+		</br>
+    </ul>
+ 
+</nav>
+	
+    <p align="center"><a href="tel:+2662-232-1919"><img src="images/contact.png" /></br></a>Click to call us</p>
+	<p align="center"><a href="mailto:ccops@clientservices.co.za"><img src="images/email.png" /></br></a>Send us an Email</p>
+</div>
+		
+<div data-role="footer"  class="footer3" >
+    <h1><font face="Open Sans Regular">&copy BlueSky 2014</font></h1>
+  </div>	
+   
+</div>
+
+
+<div data-role="page" id="categories" >
+
+<div data-role="header"  class="footer2" >
+<h1></h1>
+<img src="images/menu-icon.png" align="right" class="mtoggle" style="padding-right: 15px;" style="padding-bottom: 15px;"/>
+<img src="images/search.png" align="right" style="padding-right: 15px;" style="padding-bottom: 15px;" />
+<img onclick="gobackPrevious();" src="images/back.png" align="left" style="padding-left: 15px;" style="padding-bottom: 15px;"/></br></br></br>
+
+
+
+
+</div>
+<a href="#page" data-transition="slide">
+  <!--<img src="images/home.png" alt="Home page" style="width:42px;height:42px;border:0" align="right">-->
+</a></br>
+<p align="center" style="font-size: 24px;"><font face="Open Sans Regular">What would you like us to do for you?</font></p>
+
+	
+	<div data-role="content" class="footerSpace" >
+	<nav id="mobile4">
+ 
+    <ul id="mmenu4">
+		</br>
+        <li><a href="#page" STYLE="text-decoration: none"><img src="images/logrequest.png" width="30" height="40"/>  Log Request</a></li>
+		</br>
+        <li ><a href="#specials" STYLE="text-decoration: none"><img src="images/specials.png" width="40" height="40"/>  Specials</a></li>
+		<br>
+        <li><a href="#services" STYLE="text-decoration: none"><img src="images/services.png" width="40" height="40"/>  Services</a></li>
+		<br>
+        <li ><a href="http://www.bluesky.co.ls/article.aspx?news" STYLE="text-decoration: none"><img src="images/News.png" width="40" height="40" />  News</a></li> 
+		<br>
+        <li><a href="" STYLE="text-decoration: none"><img src="images/Profile.png" width="40" height="40"/>  Profile</a></li> 
+		<br>
+        <li><a href="#callcenter1" STYLE="text-decoration: none"><img src="images/contact.png" width="40" height="40"/>  Contact Center</a></li> 
+		<br>
+		<li><a href="#page1" STYLE="text-decoration: none" ><img src="images/logout.png" width="40" height="40" />  Logout</a></li> 
+		</br>	
+    </ul>
+ 
+</nav>
+	
+	
+         <ul id="category_list" data-role="listview" data-bind="foreach: items" data-model="viewModelCategories" class="mainmenu2" data-filter="true" data-filter-placeholder="Search..." >
+		 <li><a href="#action_options" class="action_options"  data-transition="slide">
+		 
+		 <p style="font-size: 18px;padding-left: 25px;padding-top: 10px;" class="ui-li-desc" data-bind="text: Category"></p>
+		 <img align= "right" src="images/arrow.png" width="15" height="30" class="Arrow">
+		 
+</li></a>
+		 </ul>
+    </div>	
+<div data-role="footer"  class="footer3">
+    <h1><font face="Open Sans Regular">&copy BlueSky 2014</font></h1>
+  </div>	
+   
+</div>
+<div data-role="page" id="servicePage" data-theme="d" >
+ <div data-role="header" data-theme="d"></div>
+<div data-role="content" class="footerSpace2">
+   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th align="centre" valign="top" scope="row">
+    <ul id="serviceBody" data-role="listview" class="mainmenu"></ul>
+    </th>
+    <td align="right" valign="top">
+    <div id="thePic"></div><div id="theBody"></div>
+    </td>
+  </tr>
+</table>
+      
+ 
+  </div>
+	<div data-role="footer" class="footerBG2" data-theme="c">
+		<h4><a href="#services" data-role="button" data-icon="back" data-iconpos="notext">Button</a></h4>
+	</div>
+</div>
+
+<div data-role="page" id="action_options" >
+
+<div data-role="header"  class="footer2">
+<h1></h1>
+<img src="images/menu-icon.png" align="right" class="mtoggle" style="padding-right: 15px;" style="padding-bottom: 15px;"/>
+<img src="images/search.png" align="right" style="padding-right: 15px;" style="padding-bottom: 15px;" />
+<img onclick="gobackPrevious();" src="images/back.png" align="left" style="padding-left: 15px;" style="padding-bottom: 15px;"/></br></br></br>
+
+
+
+
+
+ 
+</div>
+<!--<a href="#page" data-transition="slide">
+  <!--<img src="images/home.png" alt="Home page" style="width:42px;height:42px;border:0" align="right">
+</a>-->
+<p align="center" style="font-size: 24px;"><font face="Open Sans Regular">Futher make a selection</font></p>
+
+	<div data-role="content" class="footerSpace">
+	<nav id="mobile5">
+ 
+    <ul id="mmenu5">
+	</br>
+        <li><a href="#page" STYLE="text-decoration: none"><img src="images/logrequest.png" width="30" height="40"/>  Log Request</a></li>
+		</br>
+        <li ><a href="#specials" STYLE="text-decoration: none"><img src="images/specials.png" width="40" height="40"/>  Specials</a></li>
+		<br>
+        <li><a href="#services" STYLE="text-decoration: none"><img src="images/services.png" width="40" height="40"/>  Services</a></li>
+		<br>
+        <li ><a href="http://www.bluesky.co.ls/article.aspx?news" STYLE="text-decoration: none"><img src="images/News.png" width="40" height="40" />  News</a></li> 
+		<br>
+        <li><a href="" STYLE="text-decoration: none"><img src="images/Profile.png" width="40" height="40"/>  Profile</a></li> 
+		<br>
+        <li><a href="#callcenter1" STYLE="text-decoration: none"><img src="images/contact.png" width="40" height="40"/>  Contact Center</a></li> 
+		<br>
+		<li><a href="#page1" STYLE="text-decoration: none" ><img src="images/logout.png" width="40" height="40" />  Logout</a></li> 
+		</br>	
+    </ul>
+ 
+</nav>
+         <ul id="actions_list" data-role="listview" data-bind="foreach: items" data-model="viewModelActionOption" class="mainmenu1" data-filter="true" data-filter-placeholder="Search..." >
+		 <li><a href="#prompt_questions" class="action"  data-transition="slide">
+		 
+		 <p style="font-size: 18px;padding-left: 25px;padding-top: 10px;" class="ui-li-desc" data-bind="text: Option"></p>
+		 <img align= "right" src="images/arrow.png" width="15" height="30" class="Arrow" >
+		 
+		 </li></a>
+		 </ul>
+    </div>	
+<div data-role="footer"  class="footer3">
+    <h1><font face="Open Sans Regular">&copy BlueSky 2014</font></h1>
+  </div>	
+   
+</div>
+<!-----------------------------------    User Profile Page    ------------------------------------------------------------------------------------------------->
+<div data-role="page" id="user" >
+<div data-role="header" class="footer2">
+<h1></h1>
+<img src="images/menu-icon.png" align="right" class="mtoggle" style="padding-right: 15px;" style="padding-bottom: 15px;"/>
+<img src="images/search.png" align="right" style="padding-right: 15px;" style="padding-bottom: 15px;" />
+<img onclick="gobackPrevious();" src="images/back.png" align="left" style="padding-left: 15px;" style="padding-bottom: 15px;"/>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<nav id="mobile8">
+ 
+    <ul id="mmenu8">
+	</br>
+        <li><a href="#page" STYLE="text-decoration: none"><img src="images/logrequest.png" width="30" height="40"/>  Log Request</a></li>
+		</br>
+        <li ><a href="#specials" STYLE="text-decoration: none"><img src="images/specials.png" width="40" height="40"/>  Specials</a></li>
+		<br>
+        <li><a href="#services" STYLE="text-decoration: none"><img src="images/services.png" width="40" height="40"/>  Services</a></li>
+		<br>
+        <li ><a href="http://www.bluesky.co.ls/article.aspx?news" STYLE="text-decoration: none"><img src="images/News.png" width="40" height="40" />  News</a></li> 
+		<br>
+        <li><a href="" STYLE="text-decoration: none"><img src="images/Profile.png" width="40" height="40"/>  Profile</a></li> 
+		<br>
+        <li><a href="#callcenter1" STYLE="text-decoration: none"><img src="images/contact.png" width="40" height="40"/>  Contact Center</a></li> 
+		<br>
+		<li><a href="#page1" STYLE="text-decoration: none" ><img src="images/logout.png" width="40" height="40" />  Logout</a></li> 
+		</br>	
+    </ul>
+ 
+</nav>
+
+	
+	
+	
+    </div>
+	
+	<p align="center" style="font-size: 24px;color:#4c4c4c;"><font face="Open Sans Regular"> Please view your profile below</font></p>
+<div data-role="content" class="footerSpace">
+		
+
+			<p align="center"><font face="Open Sans Regular"> <h3 align="center"><strong></strong></h3></font> </p>
+			<p align="center">____________________________________</p>
+		 <form>
+		 <ul id="user_list" data-role="listview" data-bind="foreach: items" data-model="viewModelUserprofile" class="mainmenu1" ><br></br>
+				<table style="width:300px" align="center">
+				<tr>
+				
+				</tr>
+				<tr>
+				<td style="font-size: 20px;"><font face="Open Sans Regular">Title :</font></td>
+				<td style="font-size: 20px; "><li class="user" data-bind="text:Title" data-transition="slide"></li></td> 
+				</tr>
+				<tr>
+				<td style="font-size: 20px;"><font face="Open Sans Regular">Initials :</font></td>
+				<td style="font-size: 20px;"><li class="user" data-bind="text:Initials" data-transition="slide"></li></td> 
+				</tr>
+				<tr>
+				<td style="font-size: 20px; "><font face="Open Sans Regular">Name :</font></td>
+				<td style="font-size: 20px;"><li class="user" data-bind="text:First_Name" data-transition="slide"></li></td> 
+				</tr>
+				<tr>
+				<td style="font-size: 20px;"><font face="Open Sans Regular">Surname :</font></td>
+				<td style="font-size: 20px;"><li class="user" data-bind="text:Surname" data-transition="slide"></li></td> 
+				</tr>
+				<tr>
+				<td style="font-size: 20px;"><font face="Open Sans Regular">Status :</font></td>
+				<td style="font-size: 20px;"><li class="user" data-bind="text:Status" data-transition="slide"></li></td> 
+				</tr>
+				<tr><td></td></tr>
+				<tr></tr>
+				<tr>
+					<td><a href="#edit"  data-transition="slide" ><img src="images/Editing2.png" ></a></td>
+					<td><a href="#page"  data-transition="slide" align="left"><img src="images/Back2.png"></a></td>
+				</tr>
+				
+</table>
+</br>
+
+		 </ul>
+		 
+			
+		 </form>
+		 
+		 <p align="center">_____________________________________________</p>
+    
+     </div>
+	 <div data-role="footer"  class="footer3">
+    <h1><font face="Open Sans Regular">&copy BlueSky 2014</font></br> </h1>
+  </div>
+</div>
+<!--------------------------------------------------- Edit user Profile ------------------------------------------------------------------------------------------->
+
+<div data-role="page" id="edit" >
+<div data-role="header" class="footer2">
+<h1></h1>
+<img src="images/menu-icon.png" align="right" class="mtoggle" style="padding-right: 15px;" style="padding-bottom: 15px;"/>
+<img src="images/search.png" align="right" style="padding-right: 15px;" style="padding-bottom: 15px;" />
+<img onclick="gobackPrevious();" src="images/back.png" align="left" style="padding-left: 15px;" style="padding-bottom: 15px;"/>
+<h1></h1>
+<h1></h1>
+
+<nav id="mobile11">
+ 
+    <ul id="mmenu11">
+	</br>
+        <li><a href="#page" STYLE="text-decoration: none"><img src="images/logrequest.png" width="30" height="40"/>  Log Request</a></li>
+		</br>
+        <li ><a href="#specials" STYLE="text-decoration: none"><img src="images/specials.png" width="40" height="40"/>  Specials</a></li>
+		<br>
+        <li><a href="#services" STYLE="text-decoration: none"><img src="images/services.png" width="40" height="40"/>  Services</a></li>
+		<br>
+        <li ><a href="http://www.bluesky.co.ls/article.aspx?news" STYLE="text-decoration: none"><img src="images/News.png" width="40" height="40" />  News</a></li> 
+		<br>
+        <li><a href="" STYLE="text-decoration: none"><img src="images/Profile.png" width="40" height="40"/>  Profile</a></li> 
+		<br>
+        <li><a href="#callcenter1" STYLE="text-decoration: none"><img src="images/contact.png" width="40" height="40"/>  Contact Center</a></li> 
+		<br>
+		<li><a href="#page1" STYLE="text-decoration: none" ><img src="images/logout.png" width="40" height="40" />  Logout</a></li> 
+		</br>	
+    </ul>
+ 
+</nav>
+
+	
+	<ul id="user_list" data-role="listview" data-bind="foreach: items" data-model="viewModelUserprofile" class="mainmenu1" ></br>
+	<!--<font face="Open Sans Regular"><p align="center" style="font-size: 18px;">Welcome </br><li class="user" data-bind="text:First_Name" data-transition="slide"></li></p></font>-->
+    </div>
+	<p align="center" style="font-size: 24px;color:#4c4c4c;"><font face="Open Sans Regular">Update us on changes you want to make</font> </p>
+<div data-role="content" class="footerSpace2">
+
+			<p align="center">____________________________________</p><br>
+		
+<!--<form>
+		 <!--<ul id="edit_list" data-role="listview" data-model="viewModelSelectedUserProfile" class="mainmenu1" ><br></br>
+				<table style="width:300px" align="center">
+				<tr>
+				<td><font face="verdana"><strong>Title :</strong></font></td>
+				<td><input type="text" data-bind="value: Title"/></td>
+				
+				</tr>
+				<tr>
+				<td><font face="verdana"><strong>Initials :</strong></font></td>
+				<td><input type="text" data-bind="value: Initials"/></td> 
+				</tr>
+				<tr>
+				<td><font face="verdana"><strong>Name :</strong></font></td>
+				<td><input type="text" data-bind="value: First_Name"/></td> 
+				</tr>
+				<tr>
+				<td><font face="verdana"><strong>Surname :</strong></font></td>
+				<td><input type="text" data-bind="value: Surname"/></td> 
+				</tr>
+				<tr>
+				<td><font face="verdana"><strong>Status :</strong></font></td>
+				<td><input type="text" data-bind="value: Status"/></td> 
+				</tr>
+				<tr>
+				<td>
+				<a href="#edit" class="ui-btn ui-btn-up-undefined deleteprofile" data-transition="slide">Back</a>
+				</td>
+				<td>
+				<a href="#" class="ui-btn ui-btn-up-undefined saveprofile" data-transition="slide">Save</a>
+				</td>
+				</tr>
+</table>
+		 -->
+		 
+		  <ul id="question_list" data-role="listview" data-bind="foreach: items" data-model="viewModelAttributes" class="mainmenu1">
+			 <ul data-bind="visible: ShowAttribute(Attribute_Types_Security_Req)">
+			 <!--<ul>-->
+			
+			 
+			 
+			<!-- <li data-bind="visible: ShowYesNo(Attribute_Types_Type)"><select name="selectmenu"  data-bind="attr: {id: Attribute_Types_Type, id: Attribute_Type}" data-native-menu="true"><option value="Yes">Yes</option>
+			 <option value="No">No</option></select></li>
+			 <li data-bind="visible: ShowOptions(Attribute_Types_Type)"><select name="options" data-bind="options:SplitOptionsIntoArrayFormat(Attribute_Types_Options), attr: {class: Attribute_Type}" data-native-menu="true"></select></li>
+			  <!-- <li data-bind="visible:  ShowDatePicker(Attribute_Types_Type)"><time data-bind="date: myDate, dateFormat: 'YYYY-MM-DD'"></time></li> -->
+			 <!--<table align="justify">
+			 <tr>
+				<td><li data-bind="visible: ShowTextBox(Attribute_Types_Type)"><input type="text"  autofocus data-bind="placeholder: Attribute_Types_Type, attr: {class: Attribute_Type}"/></li></td><td><li><input type="button" class="saveChanges"   value="Save"/></li></td 
+				
+			 <td></br></br></td>
+			 </tr>
+			 </table>
+			 </br></br></br>
+			 </form>
+			 
+			 <!--</ul>-->
+			 <!--</li>-->
+			
+	
+    <li>
+        <span> 
+		
+		 <font face="Open Sans Regular"> <div class="question" data-bind="text: Attribute_Types_Description, attr: {type: Attribute_Types_Type}"></div></font>
+		 
+			 <font face="Open Sans Regular"> <div class="question" data-bind="text: Attribute_Types_Narrative, attr: {type: Attribute_Types_Type}"></div></font></br></br>
+			 
+			 
+			 <div class="ui-grid-b ui-responsive">
+			<div class="ui-block-a">
+			
+			<div data-bind="visible: ShowYesNo(Attribute_Types_Type)"><select name="selectmenu"  data-bind="attr: {id: Attribute_Types_Type, id: Attribute_Type}" data-native-menu="true"><option value="Yes">Yes</option>
+			 <option value="No">No</option></select></div> 
+			 <div  data-bind="visible: ShowOptions(Attribute_Types_Type)"><select name="options" class="ui-btn ui-mini" data-bind="options:SplitOptionsIntoArrayFormat(Attribute_Types_Options), attr: {class: Attribute_Type}" data-native-menu="true"></select></div>
+			 <div style="background-color: #4c4c4c;"><div data-bind="visible: ShowTextBox(Attribute_Types_Type)"><input type="text" style="border:none; "  size="35"  autofocus data-bind="placeholder: Attribute_Types_Type, attr: {class: Attribute_Type}"/></div></div>
+			<h1></h1>
+			
+			
+			<span></span>
+		</div>
+		
+		<div class="ui-block-b">
+		<span></span>
+		</div>
+		
+		
+		
+		<div class="ui-block-c">
+
+		<div align="justify"><img src="images/save.png" class="saveChanges" ></div>
+								<br>
+        <span></span>
+		</div>
+		</div>
+		
+
+		
+		
+		
+		
+	   <p align="left">________________________________________________________________________________________</p>
+    </li>
+    
+
+		 
+		 
+	 </ul>
+			 </ul>	 
+		 
+		 
+		 
+		 
+		 
+		
+	</br>
+     <p align="center"><a href="#user" data-transition="slide" ><img src="images/Back1.png"></a></p>
+     </div>
+	 <div data-role="footer"  class="footer3">
+    <h1><font face="Open Sans Regular">&copy BlueSky 2014</font></br></h1>
+  </div>
+</div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------>
+<div data-role="page" id="prompt_questions" >
+
+<div data-role="header" class="footerSpacef">
+<h1></h1>
+<img src="images/menu-icon.png" align="right" class="mtoggle" style="padding-right: 15px;" style="padding-bottom: 15px;"/>
+<img src="images/search.png" align="right" style="padding-right: 15px;" style="padding-bottom: 15px;" />
+<img onclick="gobackPrevious();" src="images/back.png" align="left" style="padding-left: 15px;" style="padding-bottom: 15px;"/></br></br>
+
+
+</div>
+<a href="#page" data-transition="slide">
+  <!--<img src="images/home.png" alt="Home page" style="width:42px;height:42px;border:0" align="right">-->
+</a></br>
+<p align="center" style="font-size: 24px;"><font face="Open Sans Regular">Complete this specifics about your request</font></p>
+	
+	<div data-role="content" class="footerSpace2">
+	
+	<nav id="mobile6">
+ 
+    <ul id="mmenu6">
+	</br>
+        <li><a href="#page" STYLE="text-decoration: none"><img src="images/logrequest.png" width="30" height="40"/>  Log Request</a></li>
+		</br>
+        <li ><a href="#specials" STYLE="text-decoration: none"><img src="images/specials.png" width="40" height="40"/>  Specials</a></li>
+		<br>
+        <li><a href="#services" STYLE="text-decoration: none"><img src="images/services.png" width="40" height="40"/>  Services</a></li>
+		<br>
+        <li ><a href="http://www.bluesky.co.ls/article.aspx?news" STYLE="text-decoration: none"><img src="images/News.png" width="40" height="40" />  News</a></li> 
+		<br>
+        <li><a href="" STYLE="text-decoration: none"><img src="images/Profile.png" width="40" height="40"/>  Profile</a></li> 
+		<br>
+        <li><a href="#callcenter1" STYLE="text-decoration: none"><img src="images/contact.png" width="40" height="40"/>  Contact Center</a></li> 
+		<br>
+		<li><a href="#page1" STYLE="text-decoration: none" ><img src="images/logout.png" width="40" height="40" />  Logout</a></li> 
+		</br>	
+    </ul>
+ 
+</nav>
+	
+	
+         <ul id="question_list" data-role="listview" data-bind="foreach: items" data-model="viewModelPromptQuestions" class="mainmenu1"  >
+		<font face="Open Sans Regular"> <li class="question" data-bind="text: Text, attr: {type: Type}"></li></font>
+		 <div style="background-image: url('images/grey-menu-buttons.png');"><li data-bind="visible: ShowTextBox(Type)"><input type="text" style="border:none; " data-bind="placeholder: Type, attr: {class: ID}"/></li></div></br>
+		 <li data-bind="visible: ShowYesNo(Type)"><select name="selectmenu" width="10" height="60"  data-bind="attr: {id: Type, id: ID}" data-native-menu="true"><option value="Yes">Yes</option>
+		 <option value="No">No</option></select></li>
+		 <li data-bind="visible: ShowOptions(Type)"><select name="options" data-bind="options:SplitOptionsIntoArrayFormat(Options), attr: {class: ID}" data-native-menu="true"></select></li>
+		 </ul>
+		 </br>
+		 
+		<!--  <form action="" data-theme="a">
+	<select name="cars">
+	<option value="1">Cellular phone</option>
+	<option value="saab">Home Telephone</option>
+	<option value="fiat">Work Telephone</option>
+	<option value="audi">Email</option>
+	<option value="audi">SMS</option>
+	<option value="audi">Fax</option>
+	<option value="audi">Mobi/App</option>
+	</select>
+	</form> -->
+
+	
+	<div class="ui-field-contain" align="center">
+  <fieldset data-role="controlgroup">
+    <legend style="font-size:20px "><font face="Open Sans Regular">Prefered Contact Method:</font></legend>
+      <form name="Contact">
+<div style="background-image: url('images/grey-menu-buttons.png');font-size:20px">	  
+<input type="checkbox" name="checkbox_check" value="1" id="checkbox-1a"  class="check1" style="background-color: yellow"><font face="Open Sans Regular">
+ <label for="checkbox-1a" style="font-size:20px;"><font face="Open Sans Regular">Cellular Phone</font></label></div>
+ <div style="background-image: url('grey-menu-buttons.png');">
+<input type="checkbox" name="checkbox_check" value="2" id="checkbox-2a" ><font face="Open Sans Regular">
+<label for="checkbox-2a" style="font-size:20px;"><font face="Open Sans Regular">Home Telephone</font></label></div>
+<div style="background-image: url('grey-menu-buttons.png');">
+<input type="checkbox" name="checkbox_check" value="4"  id="checkbox-3a"><font face="Open Sans Regular">
+<label for="checkbox-3a" style="font-size:20px; "><font face="Open Sans Regular">Work Telephone</font></label></div>
+<div style="background-image: url('grey-menu-buttons.png');">
+<input type="checkbox" name="checkbox_check" value="8" id="checkbox-4a"  ><font face="Open Sans Regular">
+<label for="checkbox-4a" style="font-size:20px;"><font face="Open Sans Regular">Email</font></label></div>
+<div style="background-image: url('grey-menu-buttons.png');">
+<input type="checkbox" name="checkbox_check" value="16" id="checkbox-5a" ><font face="Open Sans Regular">
+<label for="checkbox-5a" style="font-size:20px;"><font face="Open Sans Regular">SMS</font></label></div>
+<div style="background-image: url('grey-menu-buttons.png');">
+<input type="checkbox" name="checkbox_check" value="32" id="checkbox-6a" ><font face="Open Sans Regular">
+<label for="checkbox-6a" style="font-size:20px;"><font face="Open Sans Regular">Fax</font></label></div>
+<div style="background-image: url('grey-menu-buttons.png');">
+<input type="checkbox" name="checkbox_check" value="64" id="checkbox-7a" ><font face="Open Sans Regular">
+<label for="checkbox-7a" style="font-size:20px;"><font face="Open Sans Regular">Mobi/App</font></label></div>
+</form>
+
+
+<!-- <div class="ui-field-contain" align="center">
+  <fieldset data-role="controlgroup">
+    <legend><font face="verdana"> <strong>Prefered Contact Method:</strong></font></legend>
+      <input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom">
+     
+ 
+      <input type="checkbox" name="checkbox-2a" id="checkbox-2a" class="custom">
+      <label for="checkbox-2a"><font face="verdana">Home Telephone</font></label>
+ 
+      <input type="checkbox" name="checkbox-3a" id="checkbox-3a" class="custom">
+      <label for="checkbox-3a"<font face="verdana">Work Telephone</font></label>
+ 
+      <input type="checkbox" name="checkbox-4a" id="checkbox-4a" class="custom">
+      <label for="checkbox-4a"><font face="verdana">Email</font></label>
+	  
+	  <input type="checkbox" name="checkbox-5a" id="checkbox-5a" class="custom">
+      <label for="checkbox-5a"><font face="verdana">SMS</font></label>
+	  
+	  <input type="checkbox" name="checkbox-6a" id="checkbox-6a" class="custom">
+      <label for="checkbox-6a"><font face="verdana">Fax</font></label>
+	  
+	  <input type="checkbox" name="checkbox-7a" id="checkbox-7a" class="custom">
+      <label for="checkbox-7a"><font face="verdana">Mobi/App</font></label>
+    </fieldset>
+	 </div> 
+	   -->
+
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	 </div>
+	</br>
+	
+	<fieldset data-role="controlgroup">
+	<legend style="font-size:20px;"><font face="Open Sans Regular">Prefered Response:</font></legend>
+      <!-- <input type="date" name="date" id="input-1" class="custom">
+      <label for="input-1"><font face="verdana">Date</font></label> -->
+	  <div style="background-image: url('grey-menu-buttons.png');">
+	 <form action="" id="form1">
+	<select id="Ultra" onchange="run()" style="font-size:20px;">
+	<option value="urgent" id="urge" ><font face="Open Sans Regular">Urgent- within 30 min</font></option>
+	<option value="morning" id="morn"><font face="Open Sans Regular">Morning</font></option>
+	<option value="day" id="days"><font face="Open Sans Regular">During Day</font></option>
+	<option value="afternoon" id="after"><font face="Open Sans Regular">Afternoon</font></option>
+	<option value="tomorrow" id="tommo"><font face="Open Sans Regular">Tomorrow</font></option>
+	</select>
+	</form>
+ </div>
+     
+ 
+    </fieldset>
+	
+	<fieldset data-role="controlgroup">
+	
+	<legend style="font-size:20px;><font face="Open Sans Regular "> Any further Narrative on request:</font></legend>
+	<div style="background-image: url('grey-menu-buttons.png');">
+	<textarea cols="60" rows="20" name="textarea" id="textarea" autofocus placeholder="Anything we should know" align="right"></textarea>
+	</div>
+	</fieldset>
+	
+	
+</div>
+		</br>
+		<button type="submit"  id="submitreq" class="ui-btn-hidden btnSubmitRequest" data-disabled="false"><font face="Open Sans Regular"  disabled='disabled'><img src="images/submit.png"></font></button>
+		
+   	
+	
+<div data-role="footer"  class="footer3">
+
+    <h1><font face="Open Sans Regular">&copy BlueSky 2014</font></h1>
+  </div>	
+   
+</div>
+
+
+
+  <!--<script src="includes/main_menu.js"></script>
+  <script src="includes/provinces.js"></script>
+  <script src="includes/get_towns.js"></script>
+  <script src="includes/services_menu.js"></script>
+  <script src="includes/servicedetails.js"></script>
+  <script src="includes/check_validation_code.js"></script>
+  <script src="includes/get_categories.js"></script>
+  <script src="includes/get_action_options.js"></script>
+  <script src="includes/get_prompt_question.js"></script>
+  <script src="includes/countries.js"></script>
+  <script src="includes/provinces.js"></script>-->
+  <script src="includes/main_menu.js"></script>
+   <script src="includes/services_menu.js"></script>
+  <!--  <script src="includes/servicedetails.js"></script> -->
+
+ <!---------------------------------------------------------End of application pages  and declaration of Knock out variables ------------------------------------------------------------------------------------------> 
+  <script>
+	var _selectedcountry = null, _selectedprovince = null, _selectedtown = null;
+	var _selectedcategory = null, _selectedoptionaction = null;
+	var serviceURL = "http://www.plp.co.za/svc/";
+	var viewModelCoutries = null, viewModelProvinces = null, viewModelTowns = null;
+	var viewModelSearchArea = null, viewModelCategories = null, viewModelActionOption = null, viewModelPromptQuestions = null;
+	var viewModelUserprofile=null, viewModelEditprofile=null, viewModelAttributes = null;
+	
+	var viewModelSelectedUserProfile = {
+		ID: ko.observable(),
+		Title: ko.observable(),
+		Initials: ko.observable(), 
+		Surname: ko.observable(),
+		First_Name: ko.observable(),
+		Scheme: ko.observable(),
+		Status: ko.observable(),
+		VIP: ko.observable(),
+		Cancel_Date: ko.observable()
+	}
+	//session_start();
+	//$_SESSION['SearchQuestions'] = $arr;
+	/*var viewModelLogRequest = {
+		fk_Actions_OptionsID: ko.observable(),
+		Log_time: ko.observable(),
+		fk_Members_ID: ko.observable(),
+		Narrative: ko.observable(),
+		Customer_Price: ko.observable(),
+		Reg_By: ko.observable(),
+		fk_ShoppingArea: ko.observable(),
+		ContactPref: ko.observable(),
+		SearchQuestions: observableArray()
+	};*/
+	
+	/*var viewModelLogRequest = {
+		fk_Actions_OptionsID: _selectedoptionaction.optionID(),
+		Log_time: new Date(),
+		fk_Members_ID: 177,
+		Narrative: $('#narrative').text(),
+		Customer_Price: 0,
+		Reg_By: new Date(),
+		fk_ShoppingArea: 1,
+		ContactPref: 1,
+		SearchQuestions: new Array()
+	};*/
+	
+	<!----------------------------------------------------- Splitting Option into Array ---------------------------------------------------------------------------------------->
+	function SplitOptionsIntoArrayFormat(Options){
+		//console.log(Options());
+		optionsArray = new Array();
+		
+		if(Options() == undefined || Options() == null)
+			return '';
+		else{
+			var _SplitCommaDelimited = Options().split(';');
+			return _SplitCommaDelimited;
+		}
+	}
+<!-------------------------------------------------------- Method to grand editable values depending on type of user ---------------------------------------------------------------------------------->	
+	function ShowAttribute(Security_Req){
+		var setvisible = true;
+		
+		var member = false;
+		var	user = true;
+		
+		switch(Security_Req())
+		{
+			case '2':
+				if(member)
+					setvisible = true;
+				else
+					setvisible = false;
+			break;
+			case '0':
+				if(user)
+					setvisible = true;
+				else
+					setvisible = false;
+			break;
+			default:
+				if(member)
+					setvisible = true;
+				else
+					setvisible = false;
+			break;
+		}
+		
+		return setvisible;
+	}
+	
+<!----------------------------------------------------- Determining the type of input------------------------------------------------------------------------------------------->	
+	function ShowOptions(Type){
+		if(Type() == 'Options')
+			return true;
+		else
+			return false;
+	}
+	
+	function ShowYesNo(Type){
+		if(Type() == 'Yes/No' || Type() == 'yes/no')
+			return true;
+		else
+			return false;
+	}
+	
+	function ShowTextBox(Type){
+		console.log(Type());
+	
+		if(Type() == 'Text' || Type() == 'Number' || Type() == 'text' || Type() == 'number')
+			return true;
+		else
+			return false;
+	}
+	function ShowDatePicker(Type){
+	if(Attribute_Types_Type() instanceof Date  || Attribute_Types_Type()=='Date' || Attribute_Types_Type()=='date')
+		return true;
+	else
+		return false;
+	}
+	
+	
+<!------------------------------------------------------ Declaring Object to hold collected attributes to be passed to ajax call ---------------------------------------------------------------------------------------------->
+	var viewModelUpdateAttr = {
+		fk_Members_ID: null,
+		Attribute_Type: null,
+		Attribute_Value: null,
+		ak: null
+	};
+<!-------------------------------------------------------- Managing the save Button that submits changes made -------------------------------------------------------------------------------------------------->
+	$(function(){
+	
+	$(document).on('click', '.openMenu', function(){
+		alert('open');
+		$('MenuOptions').panel('open');
+		
+	});
+	
+	
+	
+		$(document).on('click', '.saveChanges', function(){
+			var selectedrow = ko.dataFor(this);
+			var Attribute_Value = null;
+			
+			if(selectedrow.Attribute_Types_Type() == 'Text' || selectedrow.Attribute_Types_Type() == 'Number' 
+					|| selectedrow.Attribute_Types_Type() == 'text' || selectedrow.Attribute_Types_Type() == 'number'){
+					Attribute_Value = $("input." + selectedrow.Attribute_Type()).val();
+			}
+			else if(selectedrow.Attribute_Types_Type() == 'Yes/No' || selectedrow.Attribute_Types_Type() == 'yes/no'){
+				Attribute_Value = $("select#" +  selectedrow.Attribute_Type() + " option:selected").text();
+			}
+			else if(selectedrow.Attribute_Types_Type() == 'Options'){
+				Attribute_Value = $("select." +  selectedrow.Attribute_Type() + " option:selected").text();
+			}
+<!---------------------------------------------loading Object with values --------------------------------------------------------------------------------------------->			
+			viewModelUpdateAttr.fk_Members_ID = 1;
+			viewModelUpdateAttr.Attribute_Type = selectedrow.Attribute_Type();
+			viewModelUpdateAttr.Attribute_Value = Attribute_Value;
+			viewModelUpdateAttr.ak = "testkey";
+<!------------------------------------------------Passing an object into strigify method to create json -------------------------------------------------------------------------------------------------------->			
+			var JsonData = JSON.stringify(viewModelUpdateAttr);
+			console.log(JsonData);
+			if(!Attribute_Value.length)
+			{
+				alert("No input made,Please make a value input before saving");
+			}else
+			{
+			
+				if (confirm('Are you sure you want to save changes to the database?')) {
+    // Save it!
+
+			$.ajax({
+<!--------------------------------------------------Connecting to ts_updatememberattribs Service to post values to database------------------------------------------------------------------------------------------------------->	
+					type: "POST",
+					url:'http://www.plp.co.za/svc/ts_updatememberattribs.php',
+					data: JsonData,
+					//contentType: "application/json; charset=utf-8",
+					dataType: "json"
+				}).success(function(data){
+				console.log("Successfully Updated changes in database");
+					console.log(data);
+					alert("Your changes successfully Uploaded to database")
+				}).fail(function(){
+					console.log("Failed to update");
+				});
+			} else {
+    // Do nothing!
+}
+			}	
+			
+			
+		});	
+		
+		
+	 
+		
+<!-----------------------------------------------Managing submit button that log users requests----------------------------------------------------------------------------------------------------->			
+		$(document).on('click', '.btnSubmitRequest', function(){
+		run();
+		checkAlert();
+		//document.getElementById("submitreq").disabled = true;
+	
+					//time
+				var x = new Date(); 
+				var h = x.getHours(); 
+				var m = x.getMinutes(); 
+				var s = x.getSeconds();
+				var time=h + ':'+ m +':'+ s; 
+				
+				//date
+				var currentDate = new Date()
+				var day = currentDate.getDate()
+				var month = currentDate.getMonth() + 1
+				var year = currentDate.getFullYear()
+				var date=day + "/" + month + "/" + year;
+				
+				var shopArea= _selectedtown.ID();
+					var tomorrow=currentDate.getDate()+ 1;
+				var tdate=tomorrow + "/" + month + "/" + year;
+				
+<!-------------------------------------------- Disabling submit buttons based on the Inputs ------------------------------------------------------------------------------------------------>	
+			if(!prefcon.length)
+			{
+				document.getElementById("submitreq").disabled = true;
+				alert("Sorry your request wont go through, You need to make selection for prefered responnse first");
+				console.log("Select request by first");
+				document.getElementById("submitreq").disabled = false;
+			}else
+			{
+				check=true;
+<!------------------------------------------------- Creating an object to store collected data from the user ---------------------------------------------------------------------->				
+			var viewModelLogRequest = {
+				fk_Actions_OptionsID: _selectedoptionaction.optionID(),
+				Log_time: time,
+				fk_Members_ID : 1,
+				Narrative : $('textarea').val(),
+				Customer_Price: 0,
+				Reg_By: prefcon,
+				fk_ShoppingArea: shopArea,
+				ContactPref:counter,
+				SearchQuestions: new Array()
+				
+			}
+			prefcon="";
+		}	
+			
+			
+				/*DATE_FORMAT(NOW(),'%Y %b %d %h:%i %p')
+				DATE_FORMAT(NOW(),'%m-%d-%Y')
+				DATE_FORMAT(NOW(),'%d %b %y')
+				DATE_FORMAT(NOW(),'%d %b %Y %T:%f')
+				Nov 04 2008 11:45 PM
+				11-04-2008
+				04 Nov 08
+				04 Nov 2008 11:45:34:243
+				
+				*/
+<!-------------------------------------------------- Populating option types with respect to questions----------------------------------------------------------------------------------------------------------->
+			
+			$('li.question').each(function(){
+				var currentquestion = ko.dataFor(this);
+				var answer = null;
+				
+				if(currentquestion.Type() == 'Text' || currentquestion.Type() == 'Number' 
+					|| currentquestion.Type() == 'text' || currentquestion.Type() == 'number'){
+					answer = $("input." + currentquestion.ID()).val();
+				}
+				else if(currentquestion.Type() == 'Yes/No' || currentquestion.Type() == 'yes/no'){
+					answer = $("select#" +  currentquestion.ID() + " option:selected").text();
+				}
+				else if(currentquestion.Type() == 'Options'){
+					answer = $("select." +  currentquestion.ID() + " option:selected").text();
+				}
+				
+				
+<!------------------------------------------------------------------ Populating SeachQuestion array with Promped Questions --------------------------------------------------------------------------------------------->				
+				 viewModelLogRequest.SearchQuestions.push({
+					fk_Prompt_ID: currentquestion.ID(),
+					Response: answer,
+					FixAccessError: new Date() 
+				});
+			});
+<!----------------------------------------------------Strigifiying the object to create Json    ---------------------------------------------------------------------------------------------------------->			
+			var JsonData = JSON.stringify(viewModelLogRequest);
+			console.log(JsonData);
+			
+			//$serialized =htmlspecialchars(serialize($arr));
+		  "<input type=\"hidden\" name=\"SearchQuestions\" value=\"$serialized\"/>";
+		  if(check==true)
+		  {
+		  if (confirm('Are you sure you want to log This request?')) {
+		  alert("Request Succesfully logged");
+<!--------------------------------------------------Ajax call to sent Data to Service-------------------------------------------------------------------------------------------------------->			
+			$.ajax({
+					
+					type: "POST",
+					url: serviceURL + 'new_request2.php',
+					data: JsonData,
+					//contentType: "application/json; charset=utf-8",
+					dataType: "json"
+				}).success(function(data){
+				console.log("Successfully inserted values in database");
+					console.log(data);
+					alert("Request Logged succesfully")
+				}).fail(function(){
+					console.log("Failed to update");
+				});
+				}
+			}	
+		});
+	
+<!-----------------------------------------Java Script functions to manage pages---------------------------------------------------------------------------------->		
+		
+		$('#countries').bind('pageinit', function(event) {
+			getcountries();
+		});
+		
+		$(document).on('pageshow', '#provinces', function(){
+			getprovinces();
+		});
+		
+		$(document).on('pageshow', '#towns', function(){
+			get_towns();
+		});
+		
+		$(document).on('pageshow', '#user', function(){
+			
+			get_user();
+		});
+		$(document).on('pageshow', '#edit', function(){
+			getAttributes();
+		});
+		
+		
+		
+		$(document).on('swipeleft swiperight', function (event) {
+		if(event.type == 'swiperight') {
+			var prevpage = '#' + $.mobile.activePage.prev('div[data-role="page1"]')[0].id;
+			$.mobile.changePage(prevpage, {
+			transition: 'slide',
+			reverse: true
+			});
+		}
+
+	if(event.type == 'swipeleft') {
+		var nextpage = '#page' + $.mobile.activePage.next('div[data-role="page"]')[0].id;
+		$.mobile.changePage(nextpage, {
+		transition: 'slide',
+		reverse: false
+		});
+		}
+		});
+
+		ko.bindingHandlers.placeholder = {
+			init: function (element, valueAccessor, allBindingsAccessor) {
+				var underlyingObservable = valueAccessor();
+				ko.applyBindingsToNode(element, { attr: { placeholder: underlyingObservable } } );
+			}
+		};
+		
+		
+		$(document).on('pageshow', '#categories', function(){
+			getGetegories(177);
+		});
+		
+		$(document).on('pageshow', '#action_options', function(){
+			getActionOptions(177);
+		});
+		$(document).on('pageshow', '#prompt_questions', function(){
+			getPromptQuestions(177);
+		});
+		$(document).on('pageshow', '#news', function(){
+		
+		});
+		$(document).on('pageshow', '#servicePage', function(){
+		getService();
+		});
+		
+		
+		function getcountries() {
+		
+			//alert("This is an email" + $email);
+			
+			$.getJSON(serviceURL + 'get_countries.php?', function(data) {
+				viewModelCoutries = ko.mapping.fromJS(data);
+				ko.attach("viewModelCoutries", viewModelCoutries);
+				
+			});
+			
+		}
+		
+		function getprovinces() {
+			$('#countries').val(_selectedcountry.CountryName());
+			
+			$.getJSON(serviceURL + 'get_provinces.php?countrycode='+ _selectedcountry.CountryCode(), function(data) {
+				
+				if(viewModelProvinces == null){
+					viewModelProvinces = ko.mapping.fromJS(data);
+					ko.attach("viewModelProvinces", viewModelProvinces);
+				}
+				else{
+					viewModelProvinces = ko.mapping.fromJS(data, viewModelProvinces);
+				}
+			});
+		}
+		
+		function get_towns() {
+		$('#provinces').val(_selectedprovince.Province());
+			$.getJSON(serviceURL + 'get_towns.php?prov_id=' + _selectedprovince.ID(), function(data) {
+				
+				if(viewModelTowns == null){
+					viewModelTowns = ko.mapping.fromJS(data);
+					ko.attach("viewModelTowns", viewModelTowns);
+				}
+				else{
+					viewModelTowns = ko.mapping.fromJS(data, viewModelTowns);
+				}
+			});
+		}
+		function get_user()
+		{
+			 // console.log(response.email);
+			$.getJSON(serviceURL + "ts_memberexist.php?Member_No=1&Club=1&ak=testkey", function(data){
+			
+				if(viewModelUserprofile==null){
+					viewModelUserprofile = ko.mapping.fromJS(data);
+					ko.attach("viewModelUserprofile", viewModelUserprofile);
+				
+				}
+				else{
+					viewModelUserprofile = ko.mapping(data,viewModelUserprofile);
+				}
+	
+			});
+	
+		}
+		
+		function edit_user()
+		{
+			$.getJSON("http://192.168.0.90/ts_readmemberattribs.php?fk_Members_ID=1&Club=1&ak=testkey", function(data){
+			
+			if(viewModelEditprofile==null){
+				viewModelEditprofile=ko.mapping.fromJS(data);
+				ko.attach("viewModelUserprofile",viewModelEditprofile);
+			
+			}
+			else{
+				viewModelEditprofile=ko.mapping(data,viewModelEditprofile);
+			}
+	
+			});
+	
+		}
+		
+		function getSearchArea(find)
+		{
+			$.getJSON(serviceURL + 'search_area.php?find=' + find, function(data) {
+				
+				if(viewModelSearchArea == null){
+					viewModelSearchArea = ko.mapping.fromJS(data);
+					ko.attach("viewModelSearchArea", viewModelSearchArea);
+				}
+				else{
+					viewModelSearchArea = ko.mapping.fromJS(data, viewModelSearchArea);
+				}
+			});
+		}
+		
+		function getGetegories(clubid)
+		{
+			$('#towns').val(_selectedtown.Area());
+			$.getJSON(serviceURL + 'get_categories.php?clubid=' + clubid, function(data) {
+				
+				if(viewModelCategories == null){
+					viewModelCategories = ko.mapping.fromJS(data);
+					ko.attach("viewModelCategories", viewModelCategories);
+				}
+				else{
+					viewModelCategories = ko.mapping.fromJS(data, viewModelCategories);
+				}
+			});
+		}
+		
+		function getActionOptions(clubid)
+		{
+			$('#categories').val(_selectedcategory.Category()); 
+			$.getJSON(serviceURL + 'get_action_options.php?category_id=' + _selectedcategory.ID() + '&clubid=' + clubid, function(data) {
+				
+				if(viewModelActionOption == null){
+					viewModelActionOption = ko.mapping.fromJS(data);
+					ko.attach("viewModelActionOption", viewModelActionOption);
+				}
+				else{
+					viewModelActionOption = ko.mapping.fromJS(data, viewModelActionOption);
+				}
+			});
+		}
+		
+		function getAttributes()
+		{
+			$.getJSON("http://www.plp.co.za/svc/ts_readmemberattribs.php?fk_Members_ID=1&Club=1&ak=testkey", function(data) {
+				
+				if(viewModelAttributes == null){
+					viewModelAttributes = ko.mapping.fromJS(data);
+					ko.attach("viewModelAttributes", viewModelAttributes);
+				}
+				else{
+					viewModelAttributes = ko.mapping.fromJS(data, viewModelAttributes);
+				}
+				
+				$('select').selectmenu();
+				$('select.options').selectmenu('refresh', true);
+			});
+			
+		}
+		
+		$('.linkArrow').each(function(){
+		$(this).append(' <img src="images/arrow.png">'); 
+		});
+		
+		function getPromptQuestions(clubid)
+		{
+			$('#action_options').val(_selectedoptionaction.Option());
+			
+			window.console.log('Selected country : ' + $('#countries').val());
+			window.console.log('Selected Province : ' + $('#provinces').val());
+			window.console.log('Selected Town : ' + $('#towns').val());
+			window.console.log('Selected Category : ' + $('#categories').val()); 
+			window.console.log('Selected Product : ' + $('#action_options').val());
+			
+			 
+			$.getJSON(serviceURL + 'get_prompt_questions.php?optionID=' + _selectedoptionaction.optionID() + '&clubid=' + clubid,
+			function(data) {
+				//console.log(data);
+				if(viewModelPromptQuestions == null){
+					viewModelPromptQuestions = ko.mapping.fromJS(data);
+					ko.attach("viewModelPromptQuestions", viewModelPromptQuestions);
+				}
+				else{
+					viewModelPromptQuestions = ko.mapping.fromJS(data, viewModelPromptQuestions);
+				}
+				
+				/*console.log($( ".options" ).length);
+				
+				$( ".options" ).each(function(index) {
+				  var self = $(this);
+				  var Options = $(self).attr("options");
+				  if(Options != undefined && Options != null){
+						console.log(Options);
+				  
+						var _SplitCommaDelimited = Options.split(';');
+					
+						$.each(_SplitCommaDelimited, function(index, value){
+							console.log(value);
+							$(self).append('<option value="' + value +'">' + value +'</option>')
+						})
+					}
+				});*/
+				$('select').selectmenu();
+				$('select.options').selectmenu('refresh', true);
+			});
+		}
+<!----------------------------------------------------------  Required by method  ------------------------------------------------------------------------------------------->		
+	function run()
+	{
+	
+     contact = document.getElementById("Ultra").value;
+	 console.log(contact);
+	 //var res = contact.substr(0, 3);
+	 var y = new Date(); 
+				//Required by (urgent);
+				var h = y.getHours(); 
+				var m = y.getMinutes() + 30; 
+				var s = y.getSeconds();
+				var urge=h + ':'+ m +':'+ s; 
+				
+				var b = y.getMinutes();
+				var norm=h + ':'+ b +':'+ s;
+				
+				var currentDate = new Date()
+				var day = currentDate.getDate() 
+				var month = currentDate.getMonth() + 1
+				var year = currentDate.getFullYear()
+				var date=year + "-0" + month + "-" + day;
+				
+				
+				var tomorrow=currentDate.getDate()+ 1;
+				var tdate=tomorrow + "/" + month + "/" + year;
+				
+				var hourDiffM=10-h;
+				var hourDiffD=14-h;
+				var hourDiffA=16-h;
+				var mindiff=30;
+				
+					 console.log(tdate);
+				
+					 
+				
+//DATE_FORMAT(NOW(),'%Y %b %d %h:%i %p')
+	 if(contact=="urgent" )
+	 {
+		//prefcon=(new date(),'%Y %b %d %h:%m %p');
+		var count=m-60;
+		if(m>29 && m>59)
+		{
+			var count=m-60;
+			m=0;
+			h=h+1;
+			urge=h + ':'+ (m + count) +':'+ s;
+			prefcon=date +  " " + urge;
+				
+		}
+		else
+		{
+				prefcon=date +  " " + urge;
+		}
+	 }else if(contact=="morning")
+	 {
+		var norm=h + ':'+ b +':'+ s;
+		if(h<10) 
+		{
+			
+			if(hourDiffM==1)
+			{
+				if(b<=30)
+				{
+				prefcon=date +  " " + "10:00:00";
+				}
+				else
+				{
+				document.getElementById("morn").disabled = true;
+				alert("Oops we cant deliver in less than 30 minutes from now, lets make it before 14:30 or any other time");
+				
+					
+				}
+			}else
+			{
+				prefcon=date +  " " + "10:00:00";
+			}
+		}
+		else
+		{
+			
+			document.getElementById("submitreq").disabled = true;
+			document.getElementById("morn").disabled = true;
+			alert("Please Make Other Selection except Morning, is after 10:00 AM now");
+		}
+	 }else if(contact=="day")
+	 {
+			if(h<14)
+			{
+				if(hourDiffD==1)
+				{
+					if(b<=60)
+					{
+					prefcon=date +  " " + "14:30:00";
+					}
+					else
+					{
+					document.getElementById("morn").disabled = true;
+					alert("Oops we cant deliver in less than 30 minutes from now");
+					}
+				}
+				else
+				{
+					prefcon=date +  " " + "14:30:00";
+				}
+			}
+			else
+			{
+				 console.log(h);
+				document.getElementById("days").disabled = true;
+				alert("Please Make Other Selection except During day, is after 14:30 now");
+			}
+	 }else if(contact=="afternoon")
+	 {
+			if(h<16)
+			{
+				if(hourDiffA==1)
+				{
+				if(b<=30)
+				{
+				prefcon=date +  " " + "16:00:00";
+				}
+				else
+				{
+					document.getElementById("after").disabled = true;
+				alert("Oops we cant deliver in less than 30 minutes from now");
+				}
+				}
+				else
+				{
+					prefcon=date +  " " + "16:00:00";
+				}
+				
+				
+			}
+			else
+			{
+					document.getElementById("after").disabled = true;
+					alert("Please Make Other Selection except Afternoon, is after 16:00 now");
+			
+			}
+	}		
+	else if(contact=="tomorrow")
+	{
+		prefcon=tdate + " " + norm;
+	}
+	
+	 return prefcon;
+	 console.log(prefcon);
+<!----------------------------------------------Disabling submit button based on inputs------------------------------------------------------------------------------------------->	 
+	/*<!-- $(':text').keyup(function() {
+    if($('#first_name').val() != "" && $('#second_name').val() != "") {
+       $('#submit').removeAttr('disabled');
+    } else {
+       $('#submit').attr('disabled', true);   
+    }
+}); */
+
+/*$(function() {
+    $("#submitreq").css("visibility", "hidden");
+
+    $("#form1").bind("change", function() { 
+        if ($("#Ultra").val().length > 0) {
+           $("#submitreq").css("visibility", "visible");
+        } else {
+           $("#submitreq").css("visibility", "hidden");
+        }
+    });
+})*/
+
+/*if (contact=="morning" && h>10 );
+{
+	document.getElementById("submitreq").disabled = true;
+	alert("Please make a valid Contact preference");
+	console.log("Button disabled");
+	
+} */
+
+
+}
+<!------------------------------------------ Contact preference Method ---------------------------------------------------------------------->	
+counter="";	
+function checkAlert()
+{
+
+	for(count=0;count<7;count++)
+	{
+		if(document.Contact.checkbox_check[count].checked==true)
+		{
+			counter= Number(counter)  +  Number(Contact.checkbox_check[count].value);
+			
+			
+		}
+
+	}
+
+
+	
+	 
+}
+function updateProgress(bytesRead, bytesTotal){
+   var current = (bytesRead/bytesTotal) + "%";
+   $("#progress-bar-percent").css("width", current);
+}
+<!------------------------------------------------  Knock out getting object based on selected index   ------------------------------------------------------------------------------------------------------>
+		$(document).on('click', '.countries', function(){	
+			_selectedcountry = ko.dataFor(this);
+			console.log(_selectedcountry);
+		});
+		
+		$(document).on('click', '.provinces', function(){	
+			_selectedprovince = ko.dataFor(this);
+		});
+		
+		$(document).on('click', '.action_options', function(){	
+			_selectedcategory = ko.dataFor(this);
+			//console.log(_selectedcategory);
+		});
+		
+		$(document).on('click', '.action', function(){	
+			_selectedoptionaction = ko.dataFor(this);
+			//console.log(_selectedcategory);
+		});
+		
+		$(document).on('click', '.town', function(){	
+			_selectedtown = ko.dataFor(this);
+			//console.log(_selectedcategory);
+		});
+		
+		ko.attach("viewModelSelectedUserProfile", viewModelSelectedUserProfile);
+		
+		$(document).on('click', '.editprofile', function(){	
+			var selectedRow = ko.dataFor(this);
+			
+			viewModelSelectedUserProfile.ID(selectedRow.ID()),
+			viewModelSelectedUserProfile.Title(selectedRow.Title()),
+			viewModelSelectedUserProfile.Initials(selectedRow.Initials()), 
+			viewModelSelectedUserProfile.Surname(selectedRow.Surname()),
+			viewModelSelectedUserProfile.First_Name(selectedRow.First_Name()),
+			viewModelSelectedUserProfile.Scheme(selectedRow.Scheme()),
+			viewModelSelectedUserProfile.Status(selectedRow.Status()),
+			viewModelSelectedUserProfile.VIP(selectedRow.VIP()),
+			viewModelSelectedUserProfile.Cancel_Date(selectedRow.Cancel_Date())
+			
+			
+			
+		});
+		
+});
+</script>
+<!--------------------------------------- Social media login code ---------------------------------------------------------------------------------->
+								 
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '354163158075726',//'113455642165175', // App ID
+	  nativeinterface : CDV.FB,
+      channelUrl : 'http://hayageek.com/examples/oauth/facebook/oauth-javascript/channel.html', // Channel File
+      status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to access the session
+      xfbml      : true  // parse XFBML
+    });
+    
+    
+	FB.Event.subscribe('auth.authResponseChange', function(response) 
+	{
+ 	 if (response.status === 'connected') 
+  	{
+  		document.getElementById("message").innerHTML +=  "<br>Connected to Facebook";
+  		//SUCCESS
+  		
+  	}	 
+	else if (response.status === 'not_authorized') 
+    {
+    	document.getElementById("message").innerHTML +=  "<br>Failed to Connect";
+
+		//FAILED
+    } else 
+    {
+    	document.getElementById("message").innerHTML +=  "<br>Logged Out";
+
+    	//UNKNOWN ERROR
+    }
+	});	
+	
+    };
+    
+   	function Login()
+	{
+	
+		FB.login(function(response) {
+		   if (response.authResponse) 
+		   {
+		    	
+				console.log('User logged in succesfully...');
+				alert('Successfully Logged in');
+				window.location = "http://192.168.9.206/Test23/#page";
+				<!--window.location = "http://localhost/Test23/#page";
+  			} else 
+  			{
+  	    	 console.log('User cancelled login or did not fully authorize.');
+   			}
+		 },{scope: 'email,user_photos,user_videos'});
+	
+	
+	}
+
+  function getUserInfo() {
+	    FB.api('/me', function(response) {
+
+	  var str="<b>Name</b> : "+response.name+"<br>";
+	  	  str +="<b>id: </b>"+response.id+"<br>";
+	  	  str +="<b>Email:</b> "+response.email+"<br>";
+	  	  str +="<input type='button' value='Logout' onclick='Logout();'/>";
+	  	  document.getElementById("status").innerHTML=str;
+		  getPhoto();
+		  alert("User Details" + response.name);
+	  	  	    
+    });
+    }
+	function getPhoto()
+	{
+	  FB.api('/me/picture?type=normal', function(response) {
+
+		  var str="<br/><b>Pic</b> : <img src='"+response.data.url+"'/>";
+	  	  document.getElementById("status").innerHTML+=str;
+	  	  	    
+    });
+	
+	}
+	function Logout()
+	{
+		FB.logout(function(){document.location.reload();});
+		window.location = "http://192.168.9.206/Test23";
+		<!--window.location = "http://localhost/Test23";
+	}
+
+  // Load the SDK asynchronously
+  (function(d){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     ref.parentNode.insertBefore(js, ref);
+   }(document));
+   
+   $(document).on('click', '.editprofile', function(){
+   
+   
+   
+   function loads()
+   {
+  $(document).bind( 'mobileinit', function(){
+  $.mobile.loader.prototype.options.text = "loading";
+  $.mobile.loader.prototype.options.textVisible = false;
+  $.mobile.loader.prototype.options.theme = "Main menu";
+  $.mobile.loader.prototype.options.html = "";
+});
+}
+	
+});
+
+</script>
+ 
+<script>
+$(function(){
+$(document).on('click','.testClick', function(){
+alert("click works")
+})
+});
+</script>
+
+
+
+</body>
+</div>
+</html>
