@@ -1,0 +1,45 @@
+Date :2015-03-26 09:49:59  Record Status : Error Occurred,Record Not Created !Tried to Log by :Date :2015-03-26 09:50:06  Record Status : Error Occurred,Record Not Created !Tried to Log by :Date :2015-03-26 09:51:19  Record Status : Error Occurred,Record Not Created !Tried to Log by :Date :2015-03-26 10:02:02  Record Status : Error Occurred,Record Not Created !Tried to Log by :Date :2015-03-26 10:32:47  Record Status : Error Occurred,Record Not Created !Tried to Log by :
+ Date :2015-03-26 10:40:07  Record Status : New summary created Successfully Logged by : 
+ Date :2015-03-26 10:45:36  Record Status : New summary created Successfully Logged by : 
+ Date :2015-03-26 11:04:27  Record Status : New summary created Successfully Logged by : 
+ Date :2015-03-26 14:26:50  Record Status : New summary created Successfully Logged by : 
+ Date :2015-03-26 15:24:26  Record Status : New summary created Successfully Logged by : 
+ Date :2015-03-27 09:40:26  Record Status : New summary created Successfully Logged by : 
+ Date :2015-03-27 09:41:19  Record Status : New summary created Successfully Logged by : 
+ Date :2015-03-27 09:42:32  Record Status : New summary created Successfully Logged by : 
+ Date :2015-03-27 09:43:27  Record Status : New summary created Successfully Logged by : 
+ Date :2015-03-27 09:45:08  Record Status : New summary created Successfully Logged by : 
+ Date :2015-03-27 15:01:38  Record Status : New summary created Successfully Logged by : 
+ Date :2015-03-27 15:11:08  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-01 17:45:01  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-01 17:45:59  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-01 17:49:40  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-01 17:52:40  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-01 17:53:42  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-01 17:54:42  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-01 17:55:46  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-01 17:56:51  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-01 17:57:36  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-01 17:58:50  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-01 17:59:52  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-02 14:37:42  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-02 14:39:17  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-02 14:40:49  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-02 14:43:54  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-02 14:44:46  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-02 14:47:39  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-02 14:53:34  Record Status : New summary created Successfully Logged by : Date :2015-04-02 14:53:42  Record Status : Error Occurred,Record Not Created !Tried to Log by :Date :2015-04-02 14:55:12  Record Status : Error Occurred,Record Not Created !Tried to Log by :Date :2015-04-02 14:55:18  Record Status : Error Occurred,Record Not Created !Tried to Log by :Date :2015-04-02 14:56:04  Record Status : Error Occurred,Record Not Created !Tried to Log by :
+ Date :2015-04-02 14:59:20  Record Status : New summary created Successfully Logged by : Date :2015-04-02 14:59:27  Record Status : Error Occurred,Record Not Created !Tried to Log by :
+ Date :2015-04-02 15:02:28  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-02 15:08:06  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-02 15:10:38  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-02 15:16:48  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-02 15:19:49  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-02 15:22:19  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-02 15:24:11  Record Status : New summary created Successfully Logged by : 
+ Date :2015-04-07 16:44:48  Record Status : New summary created Successfully Logged by :Melissa Pillay 
+ Date :2015-04-07 16:45:17  Record Status : New summary created Successfully Logged by :Melissa Pillay 
+ Date :2015-04-07 16:47:39  Record Status : New summary created Successfully Logged by :Melissa Pillay 
+ Date :2015-04-09 13:49:09  Record Status : New summary created Successfully Logged by :Melissa Pillay 
+ Date :2015-04-09 13:51:55  Record Status : New summary created Successfully Logged by :Melissa Pillay 
+ Date :2015-04-09 13:58:49  Record Status : New summary created Successfully Logged by :Melissa Pillay 

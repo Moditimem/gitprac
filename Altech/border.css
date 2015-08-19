@@ -1,0 +1,140 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab);
+
+body{
+margin:0;
+padding:0;
+font-family: 'Droid Sans', sans-serif;
+font-size:14px;
+}
+
+div#form{
+    margin:10px auto;
+	padding: 20px 20px 20px 20px;
+    width:700px;
+	border:2px solid #FF8C00;
+	}
+	
+div#form2{
+    margin:10px auto;
+	padding: 20px 20px 20px 20px;
+    width:100px;
+	border:2px solid #FF8C00;
+	}	
+	
+#username1 {    
+	margin-left:71px;
+		}
+
+#username3 {    
+	margin-left:71px;
+		}
+		
+#password{
+	margin-left:69px;
+	}
+#password1{
+	margin-left:79px;
+	}
+	#recover{
+	margin-left:120px;
+	}
+p{
+	margin-left:150px;
+}
+
+#username2 {    
+	margin-left:60px;
+		}
+		
+#re_password {    
+	margin-left:3px;
+		}	
+#f_name {    
+	margin-left:60px;
+		}
+		
+#firstname {    
+	margin-left:160px;
+		}		
+		
+#lastname {    
+	margin-left:171px;
+		}	
+#emails	 {    
+	margin-left:43px;
+		}
+		
+#member_no2	 {    
+	margin-left:100px;
+		}
+#member_no	 {    
+	margin-left:100px;
+		}		
+		
+#scheme	 {    
+	margin-left:218px;
+		}	
+#scheme1	 {    
+	margin-left:100px;
+		}			
+#first_name	 {    
+	margin-left:198px;
+		}	
+#first_name1	 {    
+	margin-left:100px;
+		}		
+#summary_text1		 {    
+	margin-left:107px;
+		}		
+#club		 {    
+	margin-left:157px;
+		}
+#club1		 {    
+	margin-left:55px;
+		}		
+#summary_by1		 {    
+	margin-left:107px;
+		}	
+
+
+A{text-decoration:none}
+A{color:FireBrick}
+
+a:hover {
+    color: #000000;
+	
+}
+#email	 {    
+	margin-left:230px;
+		}
+#email1	 {    
+	margin-left:100px;
+		}		
+#newpass	 {    
+	margin-left:76px;
+		}
+		
+#confirmpass	 {    
+	margin-left:58px;
+		}
+#surname	 {    
+	margin-left:211px;
+		}
+#surname1	 {    
+	margin-left:100px;
+		}		
+#cell	 {    
+	margin-left:189px;
+		}	
+#capdate	 {    
+	margin-left:135px;
+		}
+#capby	 {    
+	margin-left:187px;
+		}
+
+
+#memberno1	 {    
+	margin-left:288px;
+		}	
